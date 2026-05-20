@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 30% 99%;
+    --foreground: 222 32% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 32% 11%;
+
+    --muted: 220 20% 96%;
+    --muted-foreground: 220 12% 45%;
+
+    --border: 220 20% 92%;
+    --input: 220 20% 92%;
+    --ring: 217 95% 60%;
+
+    --primary: 217 95% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --accent: 220 25% 96%;
+    --accent-foreground: 222 32% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --neon: 190 92% 55%;
+    --success: 152 65% 45%;
+    --graphite: 222 32% 11%;
+
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 222 35% 7%;
+    --foreground: 220 20% 95%;
+
+    --card: 222 30% 9%;
+    --card-foreground: 220 20% 95%;
+
+    --muted: 222 25% 13%;
+    --muted-foreground: 220 12% 60%;
+
+    --border: 222 25% 16%;
+    --input: 222 25% 16%;
+    --ring: 217 95% 65%;
+
+    --primary: 217 95% 62%;
+    --primary-foreground: 222 35% 7%;
+
+    --accent: 222 25% 13%;
+    --accent-foreground: 220 20% 95%;
+
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 220 20% 95%;
+
+    --neon: 190 92% 60%;
+    --success: 152 60% 50%;
+    --graphite: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1;
+    background-image:
+      radial-gradient(60% 50% at 50% -10%, hsl(var(--primary) / 0.08), transparent 60%),
+      radial-gradient(40% 35% at 90% 10%, hsl(var(--neon) / 0.06), transparent 60%);
+    background-attachment: fixed;
+  }
+  .dark body {
+    background-image:
+      radial-gradient(60% 50% at 50% -10%, hsl(var(--primary) / 0.15), transparent 60%),
+      radial-gradient(40% 35% at 90% 10%, hsl(var(--neon) / 0.10), transparent 60%);
+  }
+  ::selection {
+    background: hsl(var(--primary) / 0.25);
+    color: hsl(var(--foreground));
+  }
+  h1, h2, h3, h4, h5 {
+    @apply font-display tracking-tight;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .glass {
+    @apply bg-white/60 dark:bg-white/[0.04] backdrop-blur-xl border border-white/40 dark:border-white/10;
+  }
+  .glass-strong {
+    @apply bg-white/80 dark:bg-white/[0.08] backdrop-blur-2xl border border-white/60 dark:border-white/15;
+  }
+  .premium-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--neon)) 100%
+    );
+  }
+  .premium-gradient-text {
+    @apply bg-gradient-to-br from-foreground via-foreground to-primary bg-clip-text text-transparent;
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, black 40%, transparent 100%);
+  }
+  .dotted-bg {
+    background-image: radial-gradient(hsl(var(--border)) 1px, transparent 1px);
+    background-size: 22px 22px;
+    mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, black 40%, transparent 100%);
+  }
+  .h-13 {
+    height: 3.25rem;
+  }
+  .container-narrow {
+    @apply container max-w-4xl;
+  }
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
