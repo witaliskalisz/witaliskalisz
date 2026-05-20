@@ -30,7 +30,7 @@ const REASONS = [
   {
     icon: Brain,
     title: "Indywidualne podejście",
-    desc: "Mama (właścicielka) jest sama na każdej wizycie. Bez asystentów, bez 'taśmy'. Każdy klient dostaje 60-120 minut pełnej uwagi. Bez NFZ-owego pośpiechu.",
+    desc: "Właścicielka osobiście prowadzi każdą wizytę. Bez asystentów, bez 'taśmy'. Każdy klient dostaje 60-120 minut pełnej uwagi. Bez NFZ-owego pośpiechu.",
     accent: "from-violet-500/15 to-violet-400/0",
   },
   {
@@ -56,7 +56,7 @@ const REASONS = [
 const STATS = [
   { value: SITE.clientsServed, suffix: "+", label: "klientów od 2018 roku" },
   { value: 222, suffix: "", label: "alergenów w Food Print 200+" },
-  { value: 95, suffix: "%", label: "trafność Diacom 3D" },
+  { value: 59, suffix: "", label: "produktów w FoodDetective™" },
   { value: 1600, suffix: "×", label: "powiększenie mikroskopu" },
 ];
 
@@ -74,7 +74,7 @@ export function WhyUs() {
             buzzwordem.
           </h2>
           <p className="text-lg text-muted-foreground">
-            Mama prowadzi Witalis od 2018 roku. Solo, bo każdy klient zasługuje na pełną uwagę
+            Właścicielka prowadzi Witalis od 2018 roku. Solo, bo każdy klient zasługuje na pełną uwagę
             — a nie zmiany asystentów co kwartał.
           </p>
         </Reveal>

@@ -113,64 +113,63 @@ Najpierw biologia. Twój organizm może reagować na pokarm na trzy sposoby:
   },
   {
     slug: "jak-badaja-sportowcy-bundesligi",
-    title: "Tak monitorują biomarkery zawodnicy Bundesligi, La Liga i Premier League",
+    title: "Jak sport wyczynowy monitoruje biomarkery — i co z tego ma amator",
     excerpt:
-      "Real Madrid, Bayern, Liverpool — wszystkie kluby ekstraklasowe mają zespoły medyczne, które robią to, co my robimy w Kaliszu. Tylko bez czekania na transfer.",
+      "Monitorowanie biomarkerów krwi i celowana suplementacja to standard pracy sztabów medycznych w sporcie wyczynowym. Co konkretnie warto sprawdzać i dlaczego warto to robić również poza zawodowstwem.",
     category: "Sport",
     readingTimeMin: 9,
     publishedAt: "2026-03-05",
     authorName: "Zespół Witalis",
     heroEmoji: "⚽",
-    content: `## Kulisy działu medycznego top-klubu europejskiego
+    content: `## Standard pracy sztabu medycznego w sporcie wyczynowym
 
-W Real Madrid pracuje **kilkudziesięcioosobowy zespół medyczny**: lekarze sportowi, fizjoterapeuci, dietetycy, psycholodzy, **lekarz dietetyk-endokrynolog** kierujący panelem badań krwi. Podobnie FC Barcelona (historycznie pod Ricardem Pruną), Bayern Monachium (Säbener Straße labs), Liverpool (Mona Nemmer i sztab), Manchester City (CFG performance lab).
+Regularne monitorowanie biomarkerów krwi u zawodników to udokumentowana praktyka w sport medicine — opisana m.in. w konsensusach Międzynarodowego Komitetu Olimpijskiego (IOC), publikacjach w *British Journal of Sports Medicine* oraz podręcznikach takich jak *Clinical Sports Nutrition* (Burke & Deakin). W wielu zawodowych klubach (piłka nożna, kolarstwo, lekkoatletyka) sztab medyczny i dietetyczny działa razem przy układaniu planów żywieniowo-suplementacyjnych.
 
-Co konkretnie monitorują regularnie:
+Co najczęściej sprawdza się regularnie:
 
-### Standardowy panel ekstraklasowy (co 4-6 tygodni)
+### Typowy panel monitorowania (co 4-6 tygodni w sezonie)
 
-- **Ferrytyna** (zapasy żelaza)
-- **25(OH)D3** (witamina D)
-- **B12 + folian**
-- **Magnez wewnątrzkomórkowy**
-- **Omega-3 index**
-- **Hormony stresu — kortyzol poranny + krzywa dobowa**
-- **Testosteron wolny + całkowity** (mężczyźni)
-- **Hormony tarczycy: TSH, fT3, fT4**
-- **Markery zapalne: hsCRP, IL-6**
-- **Kinaza kreatynowa (CK)** — marker obciążenia treningowego
-- **Mocznik, kreatynina** — funkcja nerek pod obciążeniem
+- **Ferrytyna** — zapasy żelaza, kluczowe u biegaczy i kobiet
+- **25(OH)D3** — witamina D (siła mięśni, regeneracja, odporność)
+- **B12 + folian** — istotne u wegetarian / wegan
+- **Magnez** — sen, ATP, skurcze
+- **Omega-3 index** — stan zapalny, integracja błon
+- **Kortyzol** — krzywa dobowa, marker przetrenowania
+- **Testosteron wolny + całkowity** (u mężczyzn)
+- **TSH / fT3 / fT4** — tarczyca
+- **hsCRP** — wrażliwy marker zapalny
+- **CK (kinaza kreatynowa)** — obciążenie treningowe
+- **Mocznik, kreatynina** — wydolność nerek pod obciążeniem
 
 ### Dlaczego to robią
 
-Bo każda **niezauważona niedoborność = kontuzja, spadek formy, gorsza regeneracja**. Niedobór żelaza u biegacza spada VO2max o 8-15%. Niedobór D3 wydłuża czas regeneracji mięśni o 20-30%. Niski magnez = skurcze + zaburzenia snu = -1 godzina jakościowego snu = -10% performance.
+Bo nieadresowane niedobory mają konkretne konsekwencje wydolnościowe:
+
+- Niedobór żelaza/ferrytyny u biegaczy wytrzymałościowych jest skorelowany ze **spadkiem VO2max** (przegląd: Beard & Tobin, *Am J Clin Nutr*; DellaValle & Haas, *Med Sci Sports Exerc*).
+- Niski poziom witaminy D u sportowców jest skorelowany ze **słabszą regeneracją mięśniową** i wyższym ryzykiem urazów (Owens et al., *Med Sci Sports Exerc*).
+- Magnez wpływa na **jakość snu** i syntezę ATP — niedobór = gorsza regeneracja między treningami.
 
 ## Co my robimy w Witalis
 
-Dokładnie to samo, na poziomie funkcjonalnym i komplementarnym. W pakietach **Amateur Athlete** i **Pro Athlete** sprawdzamy:
+Stosujemy **podejście funkcjonalne i komplementarne** — nie laboratoryjne testy referencyjne ani wycinki przeglądu klinicznego, tylko narzędzia obserwacyjne pozwalające szybko wskazać kierunek dalszej diagnostyki i indywidualnej suplementacji:
 
-- **Mikroskopowy obraz żywej kropli krwi** — agregacje erytrocytów (hydratacja!), aktywność leukocytów (markery zapalne), uszkodzenia wolnorodnikowe (obciążenie treningowe)
-- **Diacom 3D** — funkcjonalna ocena układów (krwionośnego, mięśniowo-szkieletowego, hormonalnego)
-- **Analiza niedoborów** — kierunki suplementacji
-- **Skierowanie na badania laboratoryjne** tam, gdzie potrzebne (ferrytyna, D3, hormony)
-- **Plan suplementacji dostosowany do dyscypliny i fazy treningu**
+- **Mikroskopowy obraz żywej kropli krwi** — pozwala obserwować kształt erytrocytów, aktywność leukocytów, agregacje (hydratacja), strukturę plazmy. Metoda obserwacyjna, nie zastępuje morfologii.
+- **Skaner Diacom 3D (bioreznoans)** — funkcjonalna ocena obciążenia układów. Metoda komplementarna, nie diagnostyczna w sensie medycznym.
+- **Analiza objawów + wywiad** — łączymy obraz z historią zdrowotną sportowca.
+- **Skierowanie na badania laboratoryjne** tam, gdzie potrzebne (ferrytyna, D3, hormony) — współpracujemy z laboratoriami.
+- **Plan suplementacji dostosowany do dyscypliny i fazy treningu**.
 
-## "Ale ja gram w okręgówce, a nie w La Lidze"
+> **Uwaga:** Stosowane przez nas metody (mikroskopia żywej kropli krwi, Diacom 3D) nie są standardem medycyny laboratoryjnej. Są to narzędzia obserwacyjno-funkcjonalne — ich rola jest komplementarna do badań krwi z laboratorium, a nie zastępcza. W razie potrzeby kierujemy na konkretne testy laboratoryjne.
 
-Im wyższy poziom, tym mniejsze są różnice — każdy gram wagi i każdy procent VO2max się liczy. Ale prawda jest taka, że **amatorzy potrzebują dokładnie tych samych narzędzi** co zawodowcy, bo:
+## "Ale ja jestem amatorem"
 
-1. Nie mają sztabu, który dba o ich regenerację
-2. Mają niższy budżet kaloryczny (krótsze treningi → mniej możliwości na pokrycie potrzeb)
-3. Muszą balansować trening z pracą, rodziną, snem
+Im wyższy poziom sportu, tym ważniejsze są drobne marginesy. Ale amator paradoksalnie potrzebuje uważniejszego monitorowania niż zawodowiec, bo:
 
-Stąd nasz pakiet **Amateur Athlete (599 zł)** — wszystkie kluczowe markery, plan na 3 miesiące, follow-up.
+1. Nie ma sztabu, który dba o jego regenerację
+2. Ma niższy budżet kaloryczny (krótsze treningi → mniejsze możliwości pokrycia potrzeb)
+3. Musi balansować trening z pracą, snem i rodziną — każdy gorszy dzień to realna strata
 
-## Co mówią dane
-
-Sportowcy klubowi, którym wdrożono **regularny monitoring biomarkerów + indywidualną suplementację**:
-- **-30% kontuzji** w sezonie (Manchester United, raport 2019)
-- **+15% jakości snu** w grupie z dopasowanym Mg/Omega-3
-- **Mniejsza absencja chorobowa** w okresie zimowym (D3 + cynk)
+Stąd nasz pakiet **Amateur Athlete (599 zł)** — kierunkowa ocena niedoborów, plan suplementacji, follow-up.
 
 ## Jak zacząć
 

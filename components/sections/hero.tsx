@@ -109,12 +109,11 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.25 }}
             className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed text-pretty"
           >
-            Premium diagnostyka krwi, nietolerancji pokarmowych i niedoborów — taka, jakiej używają
-            zawodnicy{" "}
+            Funkcjonalna diagnostyka prewencyjna —{" "}
             <strong className="text-foreground font-medium">
-              FC Barcelony, Realu Madryt i klubów Bundesligi
+              mikroskopia żywej kropli krwi, testy nietolerancji IgG i analiza niedoborów
             </strong>
-            . Tutaj, w Kaliszu.
+            . Metody komplementarne, indywidualne podejście, pełna uwaga. W Kaliszu od 2018 roku.
           </motion.p>
 
           <motion.div
@@ -180,10 +179,10 @@ export function Hero() {
           >
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
               {[
-                { icon: Microscope, label: "Powiększenie", value: "1600×", sub: "mikroskop" },
+                { icon: Microscope, label: "Powiększenie", value: "1600×", sub: "mikroskop cyfrowy" },
                 { icon: FlaskConical, label: "Alergeny", value: "222", sub: "Food Print 200+" },
-                { icon: Activity, label: "Trafność", value: "95%", sub: "Diacom 3D" },
-                { icon: ShieldCheck, label: "Wyniki", value: "40 min", sub: "FoodDetective" },
+                { icon: Activity, label: "Doświadczenie", value: "7 lat", sub: "od 2018" },
+                { icon: ShieldCheck, label: "Wyniki", value: "40 min", sub: "FoodDetective™" },
               ].map((stat, i) => (
                 <motion.div
                   key={stat.label}

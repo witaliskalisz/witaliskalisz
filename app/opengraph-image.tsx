@@ -102,8 +102,8 @@ export default async function OGImage() {
               lineHeight: 1.4,
             }}
           >
-            Premium diagnostyka krwi, nietolerancji i niedoborów. Taka, jakiej używają
-            zawodnicy La Liga — w Kaliszu.
+            Funkcjonalna diagnostyka: mikroskopia żywej kropli krwi, testy nietolerancji IgG
+            i analiza niedoborów. W Kaliszu od 2018 roku.
           </div>
         </div>
 

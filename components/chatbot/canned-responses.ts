@@ -54,9 +54,9 @@ export const CANNED_TOPICS: CannedTopic[] = [
     followups: ["ROI dla firmy?", "Możliwość fakturowania?"],
   },
   {
-    triggers: ["sport", "treningu", "biegam", "atleta", "klub", "drużyna", "fc barcelona", "real madryt"],
+    triggers: ["sport", "treningu", "biegam", "atleta", "klub", "drużyna", "trenuj", "amator", "wydolnoś"],
     answer:
-      "Sport Performance — robimy dokładnie to, co działy medyczne FC Barcelony i Realu Madryt: monitorujemy markery sportowe, ferrytynę, niedobory, dobieramy suplementację. Amateur Athlete (599 zł), Pro Athlete (1199 zł, program 3-miesięczny) i pakiety dla klubów. /sport-performance",
+      "Sport & Wellness — funkcjonalne podejście wzorowane na praktyce sportu wyczynowego: monitorujemy markery niedoborów, dobieramy suplementację indywidualnie. Amateur Athlete (599 zł), Pro Athlete (1199 zł, program 3-miesięczny) i pakiety dla klubów. Metody komplementarne, nie zastępują badań laboratoryjnych. /sport-performance",
     followups: ["Co konkretnie badacie?", "Dla biegacza?"],
   },
   {

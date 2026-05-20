@@ -8,17 +8,17 @@ export const FAQ: FaqItem[] = [
   {
     category: "diagnostics",
     q: "Czym jest mikroskopowe badanie żywej kropli krwi?",
-    a: "To technika obserwacji świeżej kropli krwi pod mikroskopem z powiększeniem 100×–1600×. Pozwala ocenić kształt erytrocytów, aktywność leukocytów, obecność uszkodzeń wolnorodnikowych, kryształów, parazytów, dysbiozę oraz markery zapalne. Klient widzi obraz swojej krwi na żywo na ekranie komputera.",
+    a: "To technika **obserwacyjna i funkcjonalna** — świeża kropla krwi ogląda się pod mikroskopem cyfrowym z powiększeniem 100×–1600×. Pozwala obserwować kształt erytrocytów, aktywność leukocytów, agregacje, struktury plazmy, obecność kryształów. **Nie zastępuje morfologii ani innych laboratoryjnych badań krwi** — jest narzędziem pomocniczym i edukacyjnym (klient widzi swoją krew na żywo), które pozwala wskazać kierunki dalszej diagnostyki. W razie potrzeby kierujemy na konkretne badania laboratoryjne.",
   },
   {
     category: "diagnostics",
     q: "Czym Diacom 3D różni się od klasycznych badań laboratoryjnych?",
-    a: "Diacom 3D to skaner bioreznoansowy — analizuje częstotliwości punktów biologicznie aktywnych (BAP) i porównuje je z bazą wzorców. Jest to metoda **komplementarna**, która pozwala wcześnie wykryć trendy w organizmie, ale **nie zastępuje badań laboratoryjnych krwi** w przypadku konkretnych diagnoz. Traktuj go jako narzędzie wczesnego wykrywania kierunków i monitorowania.",
+    a: "Diacom 3D to skaner bioreznoansowy — analizuje częstotliwości tzw. punktów biologicznie aktywnych (BAP) i porównuje je z bazą wzorców. **To metoda funkcjonalna i komplementarna, NIE diagnostyka medyczna w sensie laboratoryjnym.** Bioreznoans nie jest standardem evidence-based medicine — traktujemy go jako narzędzie obserwacyjne, pomocne we wskazaniu kierunków dalszej diagnostyki i monitorowaniu samopoczucia. Konkretne rozpoznania chorobowe wymagają laboratoryjnych badań krwi i konsultacji lekarskiej, na które chętnie kierujemy.",
   },
   {
     category: "diagnostics",
     q: "Czym FoodDetective™ różni się od testów alergicznych IgE w laboratorium?",
-    a: "Testy IgE wykrywają **alergie natychmiastowe** (anafilaksja, wysypka, obrzęk — reakcja w minutach). FoodDetective i Food Print mierzą **przeciwciała IgG**, czyli **nietolerancje pokarmowe utajone**, których objawy pojawiają się od kilku godzin do 3 dni po posiłku. To dwa różne mechanizmy. Nietolerancje IgG mogą stać za przewlekłym zmęczeniem, IBS, problemami skórnymi.",
+    a: "Testy IgE wykrywają **alergie natychmiastowe** (anafilaksja, wysypka, obrzęk — reakcja w minutach). FoodDetective i Food Print mierzą **przeciwciała IgG** — wskaźnik kontaktu organizmu z pokarmem, który u części osób bywa łączony z występowaniem objawów utajonych (kilka godzin do 3 dni po posiłku). **Stowarzyszenia alergologiczne (EAACI, AAAAI) nie uznają testów IgG za potwierdzony klinicznie test diagnozujący nietolerancje pokarmowe** — traktuj wynik jako wskazówkę do diety eliminacyjnej i obserwacji, nie jako rozpoznanie medyczne. U niektórych klientów eliminacja produktów wskazanych w IgG koreluje subiektywnie z poprawą samopoczucia.",
   },
   {
     category: "logistics",

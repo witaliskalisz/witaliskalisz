@@ -344,11 +344,11 @@ export const PACKAGES: Package[] = [
     slug: "amateur-athlete",
     category: "sport",
     name: "Amateur Athlete",
-    tagline: "Badaj się jak zawodnik — nawet jeśli grasz w okręgówce",
+    tagline: "Trenujesz poważnie — badaj się poważnie",
     price: 599,
     duration: "75 min",
     description:
-      "Trenujesz 4-6 razy w tygodniu? Biegasz, jeździsz na rowerze, podnosisz ciężary albo grasz w piłkę półzawodowo? Twoje ciało pracuje na obrotach profesjonalisty — zacznij je tak traktować. Dokładnie ten sam zestaw markerów, który monitorują zawodnicy Ekstraklasy i lig zagranicznych.",
+      "Trenujesz 4-6 razy w tygodniu? Biegasz, jeździsz na rowerze, podnosisz ciężary albo grasz w piłkę półzawodowo? Twoje ciało pracuje na obrotach profesjonalisty — zacznij je tak traktować. Pakiet skupiony na markerach niedoborów istotnych dla wydolności i regeneracji — wzorowany na funkcjonalnej praktyce sportu wyczynowego.",
     includes: [
       "Mikroskopowe badanie żywej kropli krwi (skupione na markerach sportowych)",
       "Analiza pod kątem: ferrytyny, B12, mikroelementów, hydratacji",
@@ -373,13 +373,13 @@ export const PACKAGES: Package[] = [
     slug: "pro-athlete",
     category: "sport",
     name: "Pro Athlete",
-    tagline: "Tak monitorują zdrowie w FC Barcelonie i Realu Madryt",
+    tagline: "3-miesięczny program monitorowania niedoborów",
     price: 1199,
     duration: "3 × 60 min",
     featured: true,
     badge: "Sport Pro",
     description:
-      "Pełny program 3-miesięczny dla zawodowych i półzawodowych sportowców. Robimy to samo, co sztaby medyczne klubów Bundesligi i La Liga: regularny monitoring biomarkerów + dopasowanie suplementacji do fazy treningu. Cykl: start → 6 tygodni → 12 tygodni.",
+      "Pełny program 3-miesięczny dla zawodowych i półzawodowych sportowców. Funkcjonalne podejście inspirowane praktyką sportu wyczynowego: regularny monitoring kierunkowy + dopasowanie suplementacji do fazy treningu. Cykl: start → 6 tygodni → 12 tygodni. Komplementarne do badań laboratoryjnych zlecanych w razie potrzeby.",
     includes: [
       "Pełny panel sportowy ×3 (start, 6 tyg., 12 tyg.)",
       "Diacom 3D — pełen skan układu mięśniowo-szkieletowego",
@@ -390,7 +390,7 @@ export const PACKAGES: Package[] = [
     ],
     forWhom: [
       "Zawodowi sportowcy",
-      "Zawodnicy klubowi (Ekstraklasa, niższe ligi)",
+      "Zawodnicy klubowi i ligowi",
       "Triathloniści Ironman i ultra-runners",
       "Sportowcy walczący o awans do wyższej kategorii",
     ],
@@ -409,7 +409,7 @@ export const PACKAGES: Package[] = [
     price: null,
     duration: "Dzień zjazdowy",
     description:
-      "Model FC Barcelony skalowany do polskich realiów: przyjeżdżamy do klubu, w ciągu jednego dnia badamy całą drużynę, dostarczamy indywidualne raporty oraz rekomendacje dla sztabu szkoleniowego. Dla klubów piłkarskich, siatkarskich, koszykarskich, szkółek MMA, drużyn akademickich.",
+      "Model funkcjonalnego screeningu drużyny — wzorowany na praktyce sportu wyczynowego. Przyjeżdżamy do klubu, w ciągu jednego dnia badamy całą drużynę, dostarczamy indywidualne raporty oraz rekomendacje dla sztabu szkoleniowego. Dla klubów piłkarskich, siatkarskich, koszykarskich, szkółek MMA, drużyn akademickich.",
     includes: [
       "Dojazd do klubu (Wielkopolska + sąsiednie województwa)",
       "Diagnostyka dla 12-25 zawodników w ciągu dnia",
@@ -427,7 +427,7 @@ export const PACKAGES: Package[] = [
     outcomes: [
       "Indywidualizacja przygotowania zawodników",
       "Niższa liczba kontuzji w sezonie",
-      "Argument sponsorski („nasi gracze są monitorowani jak w La Liga”)",
+      "Argument sponsorski — element profesjonalnej opieki sportowej",
     ],
     metadata: { priceLabel: "Wycena indywidualna", accent: "graphite" },
   },
@@ -478,6 +478,6 @@ export const CATEGORY_LABELS: Record<PackageCategory, { label: string; sub: stri
   },
   sport: {
     label: "Sport",
-    sub: "Performance jak w La Liga",
+    sub: "Funkcjonalne wsparcie wydolności",
   },
 };

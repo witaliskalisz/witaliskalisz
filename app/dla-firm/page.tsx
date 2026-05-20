@@ -13,7 +13,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Witalis at Work — diagnostyka jako benefit pozapłacowy",
   description:
-    "Mobilna diagnostyka dla firm w Wielkopolsce. Mama Witalis przyjeżdża do biura, bada zespół, dostarcza indywidualne raporty i — opcjonalnie — startową suplementację.",
+    "Mobilna diagnostyka dla firm w Wielkopolsce. Właścicielka Witalis przyjeżdża do biura, bada zespół, dostarcza indywidualne raporty i — opcjonalnie — startową suplementację.",
   path: "/dla-firm",
 });
 

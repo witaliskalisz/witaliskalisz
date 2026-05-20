@@ -14,10 +14,10 @@ export function Footer() {
           <div className="lg:col-span-5">
             <Logo />
             <p className="mt-6 text-sm leading-relaxed text-muted-foreground max-w-md">
-              Premium diagnostyka funkcjonalna w Kaliszu. Mikroskopowe badanie żywej kropli krwi,
-              testy nietolerancji pokarmowych IgG (FoodDetective™, Food Print 200+) oraz skaner
-              Diacom 3D. Diagnostyka, której używają zawodnicy klubów Bundesligi i La Liga — w
-              Twoim mieście.
+              Premium diagnostyka funkcjonalna i prewencyjna w Kaliszu. Mikroskopowe badanie żywej
+              kropli krwi, testy nietolerancji pokarmowych IgG (FoodDetective™, Food Print 200+)
+              oraz skaner Diacom 3D. Metody komplementarne, nie zastępują badań laboratoryjnych
+              ani konsultacji lekarskiej.
             </p>
             <div className="mt-8 space-y-3 text-sm">
               <a

@@ -2,49 +2,42 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Trophy, Zap, Target } from "lucide-react";
+import { ArrowRight, Trophy } from "lucide-react";
 import { Reveal } from "@/components/effects/reveal";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { AnimatedNumber } from "@/components/effects/animated-number";
 
-const CLUBS = [
+const MARKERS = [
   {
-    name: "Real Madrid",
-    detail: "~11 pełnych paneli krwi / sezon",
-    color: "from-yellow-400/20 to-amber-300/5",
+    label: "Ferrytyna",
+    detail: "Zapasy żelaza · biegacze, kobiety, weganie",
+    accent: "from-rose-500/20 to-red-400/5",
   },
   {
-    name: "FC Barcelona",
-    detail: "Sztab medyczny ~14 specjalistów",
-    color: "from-rose-500/20 to-red-400/5",
+    label: "Witamina D3",
+    detail: "Siła mięśni i regeneracja · 90% Polaków zimą",
+    accent: "from-amber-500/20 to-yellow-400/5",
   },
   {
-    name: "Bayern München",
-    detail: "Säbener Straße — własne laboratorium",
-    color: "from-red-500/20 to-red-400/5",
+    label: "Magnez",
+    detail: "Skurcze, jakość snu, ATP · niedostrzegane",
+    accent: "from-violet-500/20 to-violet-400/5",
   },
   {
-    name: "Liverpool FC",
-    detail: "Nutrition team pod Moną Nemmer",
-    color: "from-rose-600/20 to-rose-500/5",
+    label: "B12 + folian",
+    detail: "Wegetarianie · synteza energii w mitochondriach",
+    accent: "from-emerald-500/20 to-emerald-400/5",
   },
   {
-    name: "Manchester City",
-    detail: "CFG Performance Lab",
-    color: "from-sky-500/20 to-cyan-400/5",
+    label: "Omega-3 index",
+    detail: "Stan zapalny · średnia Polaka ~4%, cel >8%",
+    accent: "from-cyan-500/20 to-cyan-400/5",
   },
   {
-    name: "Juventus",
-    detail: "JMedical — własna klinika sportowa",
-    color: "from-zinc-500/20 to-zinc-400/5",
+    label: "Kortyzol / stres",
+    detail: "Przetrenowanie · krzywa dobowa",
+    accent: "from-slate-500/20 to-zinc-400/5",
   },
-];
-
-const STATS = [
-  { value: 30, suffix: "%", label: "redukcja kontuzji przeciążeniowych", source: "Man United 2019" },
-  { value: 90, suffix: "%", label: "Polaków zimą ma niedobór D3", source: "badania populacyjne" },
-  { value: 15, suffix: "%", label: "spadku VO2max przy niedoborze Fe", source: "Sports Med review" },
 ];
 
 export function AthleteSection() {
@@ -63,27 +56,41 @@ export function AthleteSection() {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-7 space-y-7">
             <Reveal>
-              <Badge variant="glass" className="text-[11px] uppercase tracking-[0.18em] border-white/20 text-background bg-white/10">
-                <Trophy className="size-3" /> 05 · Performance health
+              <Badge
+                variant="glass"
+                className="text-[11px] uppercase tracking-[0.18em] border-white/20 text-background bg-white/10"
+              >
+                <Trophy className="size-3" /> 05 · Performance & wellness
               </Badge>
             </Reveal>
             <Reveal delay={0.1}>
               <h2 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.02] tracking-tight text-balance">
-                Tak monitorują zdrowie
+                Te same markery, które monitorują
                 <br />
                 <span className="bg-gradient-to-br from-primary via-[hsl(var(--neon))] to-primary bg-clip-text text-transparent">
-                  zawodnicy FC Barcelony
+                  zawodowi sportowcy
                 </span>
                 <br />
-                <span className="italic font-normal text-background/60">— a Ty robisz to w Kaliszu.</span>
+                <span className="italic font-normal text-background/60">
+                  — przeniesione na Twój trening.
+                </span>
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
               <p className="text-lg text-background/70 max-w-xl leading-relaxed text-pretty">
-                Każdy klub Bundesligi, La Liga, Premier League ma dział medyczny, który regularnie
-                monitoruje markery krwi swoich zawodników: ferrytynę, witaminę D, B12, magnez,
-                hormony stresu. Bo każdy niedobór = niższe VO2max, gorsza regeneracja, kontuzje.
-                Tę samą diagnostykę funkcjonalną otrzymujesz u nas.
+                Sztaby medyczne na najwyższym poziomie sportu regularnie sprawdzają u zawodników{" "}
+                <strong className="text-background">ferrytynę, witaminę D3, B12, magnez, omega-3
+                index i hormony stresu</strong>. Bo każdy niezauważony niedobór = niższe VO2max,
+                gorsza regeneracja, ryzyko kontuzji. Tę funkcjonalną mapę markerów oferujemy także
+                amatorom i półzawodowcom.
+              </p>
+            </Reveal>
+            <Reveal delay={0.25}>
+              <p className="text-xs text-background/50 leading-relaxed max-w-xl">
+                Praktyka monitorowania biomarkerów u sportowców wyczynowych jest dobrze
+                udokumentowana w literaturze sports medicine (m.in. konsensusy MKOl/IOC, publikacje
+                w British Journal of Sports Medicine). Witalis stosuje metody funkcjonalne i
+                komplementarne — nie zastępują badań laboratoryjnych.
               </p>
             </Reveal>
             <Reveal delay={0.3}>
@@ -100,55 +107,34 @@ export function AthleteSection() {
                   size="xl"
                   className="border-white/20 bg-white/5 hover:bg-white/10 text-background"
                 >
-                  <Link href="/blog/jak-badaja-sportowcy-bundesligi">Cały artykuł</Link>
+                  <Link href="/blog/jak-badaja-sportowcy-bundesligi">Co i dlaczego badamy</Link>
                 </Button>
               </div>
             </Reveal>
           </div>
 
+          {/* Markers grid */}
           <div className="lg:col-span-5 grid grid-cols-2 gap-3">
-            {CLUBS.map((club, i) => (
+            {MARKERS.map((m, i) => (
               <motion.div
-                key={club.name}
+                key={m.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className={`relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br ${club.color} backdrop-blur-md p-4 hover:border-white/30 transition-colors`}
+                className={`relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br ${m.accent} backdrop-blur-md p-4 hover:border-white/30 transition-colors`}
               >
                 <div className="absolute inset-0 bg-white/5" />
                 <div className="relative">
-                  <p className="font-display text-base leading-tight">{club.name}</p>
-                  <p className="text-[11px] text-background/60 mt-1.5">{club.detail}</p>
+                  <p className="font-display text-base leading-tight">{m.label}</p>
+                  <p className="text-[11px] text-background/60 mt-1.5 leading-snug">
+                    {m.detail}
+                  </p>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
-
-        {/* Stats strip */}
-        <Reveal delay={0.4} className="mt-20 pt-12 border-t border-white/10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {STATS.map((stat, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="text-center md:text-left"
-              >
-                <div className="font-display text-5xl md:text-6xl tracking-tight bg-gradient-to-br from-primary to-[hsl(var(--neon))] bg-clip-text text-transparent">
-                  <AnimatedNumber value={stat.value} suffix={stat.suffix} />
-                </div>
-                <p className="mt-2 text-sm text-background/80 max-w-xs mx-auto md:mx-0">{stat.label}</p>
-                <p className="mt-1 text-[10px] uppercase tracking-wider text-background/40">
-                  źródło: {stat.source}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </Reveal>
       </div>
     </section>
   );

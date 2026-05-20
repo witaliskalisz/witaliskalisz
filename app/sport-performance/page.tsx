@@ -11,9 +11,9 @@ import { PACKAGES } from "@/lib/packages";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Sport Performance — diagnostyka dla sportowców",
+  title: "Sport & Wellness — diagnostyka funkcjonalna dla sportowców",
   description:
-    "Witalis Sport — pakiety diagnostyczne dla amatorów, półzawodowców i klubów. Markery, które monitorują FC Barcelona, Real Madryt i kluby Bundesligi.",
+    "Witalis Sport — pakiety diagnostyczne dla amatorów, półzawodowców i klubów. Markery monitorowania niedoborów wzorowane na praktyce sportu wyczynowego — w wersji funkcjonalnej i komplementarnej.",
   path: "/sport-performance",
 });
 
@@ -50,16 +50,21 @@ export default function SportPage() {
         <div className="container relative text-background">
           <Reveal className="max-w-3xl space-y-6">
             <Badge variant="glass" className="text-[11px] uppercase tracking-[0.18em] border-white/20 bg-white/10 text-background">
-              <Trophy className="size-3" /> Sport Performance
+              <Trophy className="size-3" /> Sport & Wellness
             </Badge>
             <h1 className="font-display text-5xl md:text-7xl leading-[1.02] tracking-tight text-balance">
-              Trenujesz <span className="italic font-normal text-background/50">jak zawodowiec</span>
-              <br />— badaj się jak <span className="bg-gradient-to-br from-primary via-[hsl(var(--neon))] to-primary bg-clip-text text-transparent">zawodowiec</span>.
+              Trenujesz <span className="italic font-normal text-background/50">poważnie</span>
+              <br />— badaj się <span className="bg-gradient-to-br from-primary via-[hsl(var(--neon))] to-primary bg-clip-text text-transparent">jak profesjonalista</span>.
             </h1>
             <p className="text-xl text-background/70 leading-relaxed text-pretty max-w-2xl">
-              Każdy klub La Liga, Bundesligi i Premier League ma dział medyczny monitorujący biomarkery
-              swoich zawodników co 4-6 tygodni. Bo niewidoczny niedobór = widoczna porażka. To samo
-              dostajesz w Kaliszu, w 60 minut.
+              W sporcie wyczynowym standardem jest regularny monitoring biomarkerów: ferrytyna, D3, B12,
+              magnez, omega-3, hormony stresu. Bo nieadresowany niedobór ogranicza VO2max, regenerację
+              i wydolność. Tę funkcjonalną mapę przenosimy do diagnostyki amatorów i półzawodowców.
+            </p>
+            <p className="text-xs text-background/50 leading-relaxed max-w-xl">
+              Witalis stosuje metody funkcjonalne i komplementarne (mikroskopia żywej kropli krwi,
+              skaner Diacom 3D, plan żywieniowo-suplementacyjny). Nie zastępują one badań
+              laboratoryjnych — w razie potrzeby kierujemy na konkretne testy do laboratorium.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <Button asChild variant="primary" size="xl">
@@ -91,7 +96,8 @@ export default function SportPage() {
             8 kluczowych markerów sportowca
           </h2>
           <p className="text-muted-foreground">
-            Te same markery, co w FC Barcelonie i Realu Madryt. Plus mikroskopia żywej krwi i skanowanie Diacom 3D.
+            Markery monitorowania niedoborów wzorowane na praktyce sportu wyczynowego. Plus
+            mikroskopia żywej kropli krwi i skanowanie Diacom 3D — metody funkcjonalne, komplementarne.
           </p>
         </Reveal>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -173,9 +179,9 @@ export default function SportPage() {
                   Profesjonalna diagnostyka<br />dla całej drużyny.
                 </h2>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Model FC Barcelony skalowany do polskich realiów. Dla klubów piłkarskich,
-                  siatkarskich, koszykarskich, MMA, drużyn akademickich. Roczna umowa partnerska
-                  z 20% zniżką.
+                  Model funkcjonalnego screeningu całej drużyny, wzorowany na praktyce sportu
+                  wyczynowego. Dla klubów piłkarskich, siatkarskich, koszykarskich, MMA, drużyn
+                  akademickich. Roczna umowa partnerska z 20% zniżką.
                 </p>
                 <Button asChild variant="primary" size="lg">
                   <Link href="/kontakt?temat=sport">

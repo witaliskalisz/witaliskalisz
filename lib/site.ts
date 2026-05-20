@@ -3,7 +3,7 @@ export const SITE = {
   fullName: "Witalis — Diagnostyka Premium",
   tagline: "Zobacz, czego naprawdę potrzebuje Twój organizm.",
   description:
-    "Premium diagnostyka krwi, nietolerancji pokarmowych i zdrowia — taka, jaką stosują zawodnicy FC Barcelony i Realu Madryt. W Kaliszu i regionie.",
+    "Premium diagnostyka funkcjonalna i prewencyjna w Kaliszu — mikroskopia żywej kropli krwi, testy nietolerancji IgG (FoodDetective, Food Print), analiza niedoborów i wsparcie wellness. Metody komplementarne do badań laboratoryjnych.",
   url: "https://witalis.kalisz.pl",
   ogImage: "/og-default.png",
   locale: "pl_PL",
