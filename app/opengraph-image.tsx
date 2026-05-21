@@ -11,68 +11,44 @@ export default async function OGImage() {
         style={{
           width: "100%",
           height: "100%",
-          background:
-            "linear-gradient(135deg, #0a0e1a 0%, #142141 50%, #0a0e1a 100%)",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 80,
           color: "white",
           fontFamily: "system-ui, sans-serif",
-          position: "relative",
+          background:
+            "linear-gradient(135deg, #0a0e1a 0%, #142141 50%, #0a0e1a 100%)",
         }}
       >
-        <div
-          style={{
-            position: "absolute",
-            top: -150,
-            right: -150,
-            width: 700,
-            height: 700,
-            background:
-              "radial-gradient(circle, rgba(34,211,238,0.35) 0%, transparent 60%)",
-            borderRadius: 9999,
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            bottom: -200,
-            left: -100,
-            width: 600,
-            height: 600,
-            background:
-              "radial-gradient(circle, rgba(59,130,246,0.35) 0%, transparent 60%)",
-            borderRadius: 9999,
-          }}
-        />
-
-        <div style={{ display: "flex", alignItems: "center", gap: 14, zIndex: 1 }}>
+        {/* Top brand block */}
+        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
           <div
             style={{
-              width: 56,
-              height: 56,
-              background: "linear-gradient(135deg, #3b82f6, #22d3ee)",
-              borderRadius: 14,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: 38,
+              width: 64,
+              height: 64,
+              borderRadius: 16,
+              background: "linear-gradient(135deg, #3b82f6, #22d3ee)",
+              fontSize: 40,
               fontWeight: 700,
               color: "white",
             }}
           >
             W
           </div>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <div style={{ fontSize: 32, fontWeight: 600 }}>Witalis</div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+            <div style={{ fontSize: 34, fontWeight: 600, lineHeight: 1 }}>Witalis</div>
             <div
               style={{
+                display: "flex",
                 fontSize: 13,
-                opacity: 0.6,
+                color: "rgba(255,255,255,0.55)",
                 letterSpacing: 3,
                 textTransform: "uppercase",
-                marginTop: 2,
+                lineHeight: 1,
               }}
             >
               Diagnostyka premium
@@ -80,24 +56,24 @@ export default async function OGImage() {
           </div>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 30, zIndex: 1 }}>
-          <div style={{ fontSize: 76, fontWeight: 600, lineHeight: 1.05, maxWidth: 1000 }}>
-            Zobacz, czego naprawdę
-            <br />potrzebuje{" "}
-            <span
-              style={{
-                background: "linear-gradient(135deg, #60a5fa, #22d3ee)",
-                backgroundClip: "text",
-                color: "transparent",
-              }}
-            >
-              Twoje ciało.
-            </span>
+        {/* Headline + subline */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
+          <div
+            style={{
+              display: "flex",
+              fontSize: 76,
+              fontWeight: 600,
+              lineHeight: 1.05,
+              maxWidth: 1000,
+            }}
+          >
+            Zobacz, czego naprawdę potrzebuje Twoje ciało.
           </div>
           <div
             style={{
+              display: "flex",
               fontSize: 26,
-              opacity: 0.7,
+              color: "rgba(255,255,255,0.7)",
               maxWidth: 900,
               lineHeight: 1.4,
             }}
@@ -107,18 +83,20 @@ export default async function OGImage() {
           </div>
         </div>
 
+        {/* Footer line */}
         <div
           style={{
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
             fontSize: 18,
-            opacity: 0.6,
-            zIndex: 1,
+            color: "rgba(255,255,255,0.55)",
           }}
         >
-          <div>witalis.kalisz.pl · ul. Babina 6 · 62-800 Kalisz</div>
-          <div>881 353 444</div>
+          <div style={{ display: "flex" }}>
+            witalis.kalisz.pl · ul. Babina 6 · 62-800 Kalisz
+          </div>
+          <div style={{ display: "flex" }}>881 353 444</div>
         </div>
       </div>
     ),
