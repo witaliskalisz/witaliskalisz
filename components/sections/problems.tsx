@@ -95,7 +95,7 @@ export function Problems() {
       <div className="container">
         <Reveal className="text-center max-w-3xl mx-auto mb-16 space-y-5">
           <Badge variant="outline" className="text-[11px] uppercase tracking-[0.18em]">
-            01 · Sygnały, które ignorujesz
+            02 · Sygnały, które ignorujesz
           </Badge>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-balance">
             Twoje ciało <span className="italic font-normal text-muted-foreground">krzyczy</span>

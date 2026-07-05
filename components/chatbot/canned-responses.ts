@@ -8,13 +8,13 @@ export const CANNED_TOPICS: CannedTopic[] = [
   {
     triggers: ["cena", "cennik", "kosztuje", "ceny", "ile", "ile to"],
     answer:
-      "Nasze pakiety zaczynają się od 249 zł (Start — żywa kropla krwi + krótka konsultacja). Pełna oferta to 14 pakietów: indywidualne, dla firm i dla sportowców. Pełny cennik znajdziesz w sekcji Pakiety.",
-    followups: ["Jak wybrać pakiet?", "Czy mogę zapłacić w ratach?", "Faktura VAT?"],
+      "Mamy 3 pakiety: Start (249 zł — żywa kropla krwi + konsultacja), Gut Health (od 349 zł — nietolerancje pokarmowe, cena zależna od liczby badanych produktów) oraz Witaminy & Minerały (449 zł — analiza niedoborów). Szczegóły w sekcji Pakiety.",
+    followups: ["Jak wybrać pakiet?", "Czy mogę zapłacić kartą?", "Faktura VAT?"],
   },
   {
     triggers: ["jak", "wybrać", "polec", "który pakiet", "polecisz"],
     answer:
-      "Najszybciej: wypełnij quiz na stronie głównej (5 pytań, 3 min). Na podstawie Twoich objawów polecę pakiet. Większość osób zaczyna od pakietu Gut Health (899 zł) jeśli ma problemy trawienne, albo Witaminy & Minerały (449 zł) jeśli głównym objawem jest zmęczenie.",
+      "Najszybciej: wypełnij krótki quiz na stronie głównej (3 pytania). Na podstawie objawów polecę pakiet. Większość osób zaczyna od Gut Health przy problemach trawiennych, Witaminy & Minerały przy zmęczeniu, albo Start jeśli chce najpierw zobaczyć swoją krew.",
     followups: ["Pokaż mi quiz", "Co zawiera Gut Health?"],
   },
   {
@@ -26,7 +26,7 @@ export const CANNED_TOPICS: CannedTopic[] = [
   {
     triggers: ["adres", "gdzie", "lokalizacja", "kontakt", "kalisz", "dojazd"],
     answer:
-      "ul. Babina 6, 62-800 Kalisz. Centrum miasta. Mapę znajdziesz na stronie /kontakt. Dla pakietów B2B (firmy) i Sport Club przyjeżdżamy do klienta — dojazd w obrębie Wielkopolski.",
+      "ul. Babina 6, 62-800 Kalisz. Centrum miasta. Mapę znajdziesz na stronie /kontakt.",
     followups: ["Parking?", "Komunikacja miejska?"],
   },
   {
@@ -38,31 +38,13 @@ export const CANNED_TOPICS: CannedTopic[] = [
   {
     triggers: ["nietoler", "food", "ige", "igg", "fooddetective", "alerg"],
     answer:
-      "Mamy 3 poziomy testów nietolerancji IgG: FoodDetective (59 produktów, wynik w 40 min, w pakiecie Gut Health 899 zł), Food Print 200+ (laboratoryjny mikromacierz na 222 alergeny, 1499 zł) oraz Food Test 90/110. To NIE są testy IgE (alergie natychmiastowe) — testy IgG to nietolerancje utajone (objawy 2-72h po posiłku).",
-    followups: ["Różnica IgG vs IgE?", "Który test wybrać?"],
+      "Test FoodDetective™ mierzy przeciwciała IgG na produkty spożywcze — to wskazówka do diety eliminacyjnej. Jest w pakiecie Gut Health (od 349 zł, cena zależna od liczby badanych produktów). To NIE są testy IgE (alergie natychmiastowe) — IgG to nietolerancje utajone (objawy 2-72h po posiłku).",
+    followups: ["Różnica IgG vs IgE?", "Co zawiera Gut Health?"],
   },
   {
-    triggers: ["diacom", "scanner", "3d", "bioreznoans"],
+    triggers: ["bezpiecz", "ciąża", "dzieci", "dziecko"],
     answer:
-      "Diacom 3D to bioreznoansowy skaner funkcjonalny — w 15 minut ocenia stan układów organizmu (krwionośny, hormonalny, mięśniowy itd.). To metoda KOMPLEMENTARNA, nie zastępuje badań laboratoryjnych. Występuje w pakietach Hormonal Balance, Full Body Premium i VIP Longevity.",
-    followups: ["Czy to działa?", "Dla kogo Diacom?"],
-  },
-  {
-    triggers: ["firm", "biuro", "pracownik", "b2b", "hr", "benefit"],
-    answer:
-      "Witalis at Work — 3 pakiety dla firm. Office Check (199 zł/os.) — mini-screening dla 8+ osób. Team Vitality (449 zł/os.) — pełna diagnostyka jako benefit pozapłacowy. Executive Care (1299 zł/os.) — premium dla zarządu. Przyjeżdżamy do biura. Szczegóły: /dla-firm",
-    followups: ["ROI dla firmy?", "Możliwość fakturowania?"],
-  },
-  {
-    triggers: ["sport", "treningu", "biegam", "atleta", "klub", "drużyna", "trenuj", "amator", "wydolnoś"],
-    answer:
-      "Sport & Wellness — funkcjonalne podejście wzorowane na praktyce sportu wyczynowego: monitorujemy markery niedoborów, dobieramy suplementację indywidualnie. Amateur Athlete (599 zł), Pro Athlete (1199 zł, program 3-miesięczny) i pakiety dla klubów. Metody komplementarne, nie zastępują badań laboratoryjnych. /sport-performance",
-    followups: ["Co konkretnie badacie?", "Dla biegacza?"],
-  },
-  {
-    triggers: ["bezpiecz", "ciąża", "dzieci", "dziecko", "rozrusznik"],
-    answer:
-      "Żywa kropla krwi i FoodDetective są bezpieczne od 5 r.ż. Diacom 3D NIE jest wykonywany u kobiet w ciąży, osób z rozrusznikiem serca, padaczką, dużymi metalowymi implantami stalowymi, implantem ślimakowym ani w ogólnoustrojowym zakażeniu. Pełna lista przeciwwskazań omawiana podczas zapisu.",
+      "Mikroskopowe badanie żywej kropli krwi i test FoodDetective™ są bezpieczne od 5 r.ż. (po wcześniejszej konsultacji telefonicznej). Ewentualne przeciwwskazania omawiamy podczas zapisu.",
   },
   {
     triggers: ["rodo", "dane", "prywatność"],
@@ -72,7 +54,7 @@ export const CANNED_TOPICS: CannedTopic[] = [
   {
     triggers: ["płatność", "karta", "blik", "raty", "faktura", "vat"],
     answer:
-      "Płatność: gotówka, BLIK lub karta. Wystawiamy fakturę VAT (firmy i osoby fizyczne). Pakiety wielowizytowe (Full Body Premium, VIP Longevity) można rozłożyć na 2 raty bez odsetek.",
+      "Płatność: gotówka, BLIK lub karta. Wystawiamy fakturę VAT (firmy i osoby fizyczne).",
   },
   {
     triggers: ["nfz", "refund"],

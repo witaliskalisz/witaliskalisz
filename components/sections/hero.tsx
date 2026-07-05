@@ -11,6 +11,7 @@ import {
   ArrowRight,
   Activity,
   FlaskConical,
+  Phone,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -20,7 +21,7 @@ import { SITE } from "@/lib/site";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-16 pb-20 md:pt-24 md:pb-28 min-h-[88dvh] flex items-center">
+    <section className="relative overflow-hidden pt-10 pb-16 md:pt-24 md:pb-28 md:min-h-[88dvh] flex items-center">
       {/* Background layers */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 grid-bg opacity-[0.35] dark:opacity-[0.18]" />
@@ -44,14 +45,14 @@ export function Hero() {
                 <BrandMark className="size-9 md:size-12 text-primary-foreground" />
                 <span className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-primary to-[hsl(var(--neon))] opacity-30 blur-xl -z-10" />
               </span>
-              <span className="font-display text-[clamp(3.5rem,9vw,7rem)] leading-none tracking-[-0.04em] font-semibold">
+              <span className="font-logo text-[clamp(3.5rem,9vw,7rem)] leading-none tracking-[-0.03em] font-semibold">
                 Witalis
               </span>
             </div>
             <div className="flex items-center gap-3">
               <span className="h-px w-10 bg-gradient-to-r from-transparent to-border" />
               <span className="text-[10px] md:text-xs font-semibold uppercase tracking-[0.32em] text-muted-foreground">
-                Prywatna diagnostyka · Kalisz · od 2018
+                Mikroskopia żywej krwi · Kalisz · od 2018
               </span>
               <span className="h-px w-10 bg-gradient-to-l from-transparent to-border" />
             </div>
@@ -120,20 +121,26 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-10 flex flex-col sm:flex-row gap-3 justify-center"
+            className="mt-10 flex flex-col sm:flex-row gap-3 justify-center w-full sm:w-auto"
           >
             <MagneticButton>
-              <Button asChild variant="primary" size="xl">
-                <Link href="/umow-konsultacje">
-                  Umów konsultację
-                  <ArrowRight className="size-4" />
-                </Link>
+              <Button asChild variant="primary" size="xl" className="w-full sm:w-auto">
+                <a href={`tel:${SITE.contact.phone}`}>
+                  <Phone className="size-4" />
+                  Zadzwoń: {SITE.contact.phoneDisplay}
+                </a>
               </Button>
             </MagneticButton>
-            <Button asChild variant="outline" size="xl">
-              <Link href="/pakiety">Sprawdź pakiety</Link>
+            <Button asChild variant="outline" size="xl" className="w-full sm:w-auto">
+              <Link href="/umow-konsultacje">
+                Umów online
+                <ArrowRight className="size-4" />
+              </Link>
             </Button>
           </motion.div>
+          <p className="mt-3 text-xs text-muted-foreground">
+            Rejestracja telefoniczna: {SITE.contact.hoursRegistration}
+          </p>
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -166,7 +173,7 @@ export function Hero() {
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <Microscope className="size-4 text-primary" />
-              <span>FoodDetective™ · Diacom 3D</span>
+              <span>FoodDetective™ · Żywa kropla krwi</span>
             </div>
           </motion.div>
 
@@ -175,12 +182,12 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-16 md:mt-24 w-full max-w-4xl"
+            className="mt-12 md:mt-24 w-full max-w-4xl"
           >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+            <div className="hidden sm:grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
               {[
                 { icon: Microscope, label: "Powiększenie", value: "1600×", sub: "mikroskop cyfrowy" },
-                { icon: FlaskConical, label: "Alergeny", value: "222", sub: "Food Print 200+" },
+                { icon: FlaskConical, label: "Produkty", value: "59", sub: "FoodDetective™" },
                 { icon: Activity, label: "Doświadczenie", value: "7 lat", sub: "od 2018" },
                 { icon: ShieldCheck, label: "Wyniki", value: "40 min", sub: "FoodDetective™" },
               ].map((stat, i) => (

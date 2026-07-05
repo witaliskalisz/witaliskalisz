@@ -7,7 +7,7 @@ export function AnnouncementBar() {
       <div className="container py-2 flex items-center justify-center gap-2 text-[11px] md:text-xs font-medium text-foreground/80">
         <Sparkles className="size-3.5 text-primary shrink-0" />
         <span className="text-balance text-center">
-          Witalis 2026 — jedyna diagnostyka tej klasy w regionie kaliskim.
+          Witalis — prywatna diagnostyka funkcjonalna w sercu Kalisza.
           <Link href="/pakiety" className="ml-2 underline-offset-4 hover:underline font-semibold">
             Zobacz pakiety →
           </Link>

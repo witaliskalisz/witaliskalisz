@@ -68,16 +68,17 @@ export function Nav() {
           </ul>
 
           <div className="flex items-center gap-2">
-            <a
-              href={`tel:${SITE.contact.phone}`}
-              className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors rounded-full"
-            >
-              <Phone className="size-3.5" />
-              <span>{SITE.contact.phoneDisplay}</span>
-            </a>
             <ThemeToggle />
-            <Button asChild variant="primary" size="sm" className="hidden md:inline-flex">
-              <Link href="/umow-konsultacje">Umów konsultację</Link>
+            {/* Telefon — główne CTA, widoczny także na mobile */}
+            <Button asChild variant="primary" size="sm">
+              <a href={`tel:${SITE.contact.phone}`}>
+                <Phone className="size-4" />
+                <span className="hidden sm:inline">{SITE.contact.phoneDisplay}</span>
+                <span className="sm:hidden">Zadzwoń</span>
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="sm" className="hidden md:inline-flex">
+              <Link href="/umow-konsultacje">Umów online</Link>
             </Button>
             <Button
               variant="ghost"
@@ -120,15 +121,14 @@ export function Nav() {
               ))}
               <div className="pt-6 flex flex-col gap-3">
                 <Button asChild variant="primary" size="lg">
-                  <Link href="/umow-konsultacje">Umów konsultację</Link>
+                  <a href={`tel:${SITE.contact.phone}`}>
+                    <Phone className="size-4" />
+                    Zadzwoń: {SITE.contact.phoneDisplay}
+                  </a>
                 </Button>
-                <a
-                  href={`tel:${SITE.contact.phone}`}
-                  className="inline-flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium rounded-full border border-border hover:bg-muted transition-colors"
-                >
-                  <Phone className="size-4" />
-                  {SITE.contact.phoneDisplay}
-                </a>
+                <Button asChild variant="outline" size="lg">
+                  <Link href="/umow-konsultacje">Umów online</Link>
+                </Button>
               </div>
             </motion.div>
           </motion.div>

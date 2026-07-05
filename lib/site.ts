@@ -1,9 +1,9 @@
 export const SITE = {
   name: "Witalis",
-  fullName: "Witalis — Diagnostyka Premium",
+  fullName: "Witalis — Prywatna diagnostyka w Kaliszu",
   tagline: "Zobacz, czego naprawdę potrzebuje Twój organizm.",
   description:
-    "Premium diagnostyka funkcjonalna i prewencyjna w Kaliszu — mikroskopia żywej kropli krwi, testy nietolerancji IgG (FoodDetective, Food Print), analiza niedoborów i wsparcie wellness. Metody komplementarne do badań laboratoryjnych.",
+    "Prywatna diagnostyka funkcjonalna i prewencyjna w Kaliszu — mikroskopia żywej kropli krwi, testy nietolerancji pokarmowych IgG (FoodDetective) i analiza niedoborów. Metody komplementarne do badań laboratoryjnych.",
   url: "https://witalis.kalisz.pl",
   ogImage: "/og-default.png",
   locale: "pl_PL",
@@ -38,7 +38,6 @@ export const SITE = {
 
   certifications: [
     "Certyfikat FoodDetective™",
-    "Diacom 3D Quantum Scanner",
     "Mikroskopia z 1600× powiększeniem",
     "RODO compliant",
   ],
@@ -47,28 +46,18 @@ export const SITE = {
 export const NAVIGATION = {
   main: [
     { label: "Pakiety", href: "/pakiety" },
-    { label: "Dla firm", href: "/dla-firm" },
-    { label: "Sport", href: "/sport-performance" },
-    { label: "Blog", href: "/blog" },
+    { label: "O nas", href: "/o-nas" },
     { label: "Kontakt", href: "/kontakt" },
   ],
   footer: {
     diagnostyka: [
       { label: "Wszystkie pakiety", href: "/pakiety" },
-      { label: "Żywa kropla krwi", href: "/pakiety/start" },
-      { label: "Nietolerancje IgG", href: "/pakiety/gut-health" },
-      { label: "Diacom 3D", href: "/pakiety/full-body" },
+      { label: "Start — żywa kropla krwi", href: "/pakiety/start" },
+      { label: "Gut Health — nietolerancje", href: "/pakiety/gut-health" },
       { label: "Witaminy & minerały", href: "/pakiety/vitamins" },
     ],
-    offerings: [
-      { label: "Dla osób indywidualnych", href: "/pakiety#indywidualne" },
-      { label: "Dla firm — Witalis at Work", href: "/dla-firm" },
-      { label: "Dla sportowców", href: "/sport-performance" },
-      { label: "Pakiety VIP / Longevity", href: "/pakiety/vip-longevity" },
-    ],
     company: [
-      { label: "O Witalis", href: "/#zespol" },
-      { label: "Blog edukacyjny", href: "/blog" },
+      { label: "O nas", href: "/o-nas" },
       { label: "Umów konsultację", href: "/umow-konsultacje" },
       { label: "Kontakt", href: "/kontakt" },
     ],

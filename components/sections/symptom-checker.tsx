@@ -26,9 +26,7 @@ const QUESTIONS: Question[] = [
     options: [
       { value: "tired", label: "Zmęczenie i brak energii", emoji: "🔋" },
       { value: "gut", label: "Problemy trawienne / skóra", emoji: "🥗" },
-      { value: "hormones", label: "Hormony / waga / nastrój", emoji: "⚖️" },
-      { value: "sport", label: "Stagnacja w sporcie / trening", emoji: "🏃" },
-      { value: "general", label: "Chcę pełny screening", emoji: "🔬" },
+      { value: "general", label: "Chcę zacząć od podstaw", emoji: "🔬" },
     ],
   },
   {
@@ -37,61 +35,26 @@ const QUESTIONS: Question[] = [
     options: [
       { value: "short", label: "Kilka tygodni", emoji: "⏳" },
       { value: "medium", label: "Kilka miesięcy", emoji: "📅" },
-      { value: "long", label: "Ponad rok", emoji: "🗓️" },
-      { value: "years", label: "Lata, próbowałem już różnych rzeczy", emoji: "😮‍💨" },
-    ],
-  },
-  {
-    id: "lifestyle",
-    prompt: "Czy regularnie trenujesz?",
-    options: [
-      { value: "no", label: "Nie, nie uprawiam sportu" },
-      { value: "casual", label: "Tak, 1-3 razy w tygodniu" },
-      { value: "active", label: "Tak, 4-6 razy w tygodniu" },
-      { value: "athlete", label: "Tak, na poziomie półzawodowym / zawodowym" },
-    ],
-  },
-  {
-    id: "stress",
-    prompt: "Jak ze stresem w Twoim życiu?",
-    options: [
-      { value: "low", label: "Pod kontrolą" },
-      { value: "moderate", label: "Czasem trudno, ale dam radę" },
-      { value: "high", label: "Wysoki — praca, deadliny, mało snu" },
-      { value: "burnout", label: "Czuję wypalenie" },
+      { value: "long", label: "Rok lub dłużej", emoji: "🗓️" },
     ],
   },
   {
     id: "tried",
-    prompt: "Czy badałeś się już wcześniej?",
+    prompt: "Czy badałeś/aś się już wcześniej?",
     options: [
-      { value: "nothing", label: "Nie, to mój pierwszy raz" },
-      { value: "nfz", label: "Tylko podstawowe NFZ" },
-      { value: "private", label: "Robiłem prywatne badania, ale brak diagnozy" },
-      { value: "alternative", label: "Próbowałem różnych alternatywnych metod" },
+      { value: "nothing", label: "Nie, to mój pierwszy raz", emoji: "🌱" },
+      { value: "nfz", label: "Tylko podstawowe badania", emoji: "🩺" },
+      { value: "private", label: "Tak, ale bez odpowiedzi", emoji: "🔁" },
     ],
   },
 ];
 
 function recommend(answers: Record<string, Answer>): string {
-  // Heurystyka rekomendacji
-  if (answers.main === "gut") {
-    if (answers.duration === "years" || answers.tried === "private") return "food-print-200";
-    return "gut-health";
-  }
-  if (answers.main === "sport") {
-    if (answers.lifestyle === "athlete") return "pro-athlete";
-    return "amateur-athlete";
-  }
-  if (answers.main === "hormones") return "hormonal";
-  if (answers.main === "general") {
-    if (answers.duration === "years") return "vip-longevity";
-    return "full-body";
-  }
-  if (answers.main === "tired") {
-    if (answers.stress === "burnout") return "hormonal";
-    return "vitamins";
-  }
+  // Heurystyka rekomendacji — tylko 3 pakiety w ofercie
+  if (answers.main === "gut") return "gut-health";
+  if (answers.main === "tired") return "vitamins";
+  // "general" lub pierwsza wizyta → Start; przy dłuższych problemach → Witaminy & Minerały
+  if (answers.main === "general" && answers.tried === "private") return "vitamins";
   return "start";
 }
 
@@ -133,7 +96,7 @@ export function SymptomChecker() {
         <div className="max-w-3xl mx-auto">
           <Reveal className="text-center mb-12 space-y-5">
             <Badge variant="accent" className="text-[11px] uppercase tracking-[0.18em]">
-              <Sparkles className="size-3" /> 04 · 3 minuty, 5 pytań
+              <Sparkles className="size-3" /> 04 · 1 minuta, 3 pytania
             </Badge>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-balance">
               <span className="italic font-normal text-muted-foreground">Nie wiesz</span> od czego zacząć?

@@ -36,11 +36,11 @@ export function Logo({ className, short = false, size = "md" }: LogoProps) {
       </span>
       {!short && (
         <span className="flex flex-col leading-none">
-          <span className="font-display text-2xl font-semibold tracking-tight">
+          <span className="font-logo text-2xl font-semibold tracking-[-0.01em]">
             {SITE.name}
           </span>
           <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground mt-1">
-            Prywatna diagnostyka · Kalisz
+            Mikroskopia żywej krwi · Kalisz
           </span>
         </span>
       )}
@@ -51,16 +51,16 @@ export function Logo({ className, short = false, size = "md" }: LogoProps) {
 export function BrandMark({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 32 32" fill="none" className={className} aria-hidden>
-      {/* Elegant teardrop */}
+      {/* Teardrop rising from the centre of the W */}
       <path
-        d="M 16 5.5 C 14 8, 12.6 9.8, 12.6 11.7 C 12.6 13.6, 14.1 14.9, 16 14.9 C 17.9 14.9, 19.4 13.6, 19.4 11.7 C 19.4 9.8, 18 8, 16 5.5 Z"
+        d="M 16 6 C 13.6 9, 12.1 11.1, 12.1 13.2 C 12.1 15.3, 13.8 16.9, 16 16.9 C 18.2 16.9, 19.9 15.3, 19.9 13.2 C 19.9 11.1, 18.4 9, 16 6 Z"
         fill="currentColor"
       />
-      {/* Smooth W with bezier curves */}
+      {/* Bold W formed by two V strokes */}
       <path
-        d="M 5.5 17 C 5.5 17, 7.5 22.5, 10 26.5 C 11 28, 12 27.8, 12.6 26.5 C 13.5 24.5, 14.8 22, 16 19.5 C 17.2 22, 18.5 24.5, 19.4 26.5 C 20 27.8, 21 28, 22 26.5 C 24.5 22.5, 26.5 17, 26.5 17"
+        d="M 5 15.5 L 9.6 25.8 C 10.1 26.9, 11.6 26.9, 12.1 25.8 L 16 17.2 L 19.9 25.8 C 20.4 26.9, 21.9 26.9, 22.4 25.8 L 27 15.5"
         stroke="currentColor"
-        strokeWidth="2.2"
+        strokeWidth="3.1"
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="none"

@@ -11,10 +11,10 @@ export function medicalBusinessSchema() {
     description: SITE.description,
     url: SITE.url,
     image: `${SITE.url}/og-default.png`,
-    logo: `${SITE.url}/logo.svg`,
+    logo: `${SITE.url}/logo.png`,
     telephone: SITE.contact.phone,
     email: SITE.contact.email,
-    priceRange: "199-4999 PLN",
+    priceRange: "od 249 PLN",
     address: {
       "@type": "PostalAddress",
       streetAddress: SITE.address.street,
@@ -52,25 +52,19 @@ export function medicalBusinessSchema() {
         "@type": "MedicalTest",
         name: "Mikroskopowe badanie żywej kropli krwi",
         description:
-          "Analiza świeżej kropli krwi pod mikroskopem z powiększeniem do 1600× pozwala ocenić kształt erytrocytów, aktywność leukocytów, obecność pasożytów, candidy, dysbiozy oraz markery zapalne.",
+          "Analiza świeżej kropli krwi pod mikroskopem z powiększeniem do 1600× pozwala ocenić kształt erytrocytów, aktywność leukocytów oraz inne struktury. Metoda komplementarna do badań laboratoryjnych.",
       },
       {
         "@type": "MedicalTest",
         name: "Test nietolerancji pokarmowych FoodDetective™",
         description:
-          "Test IgG na 59 najpopularniejszych produktów żywieniowych. Wynik w 40 minut.",
+          "Test przeciwciał IgG na produkty żywieniowe. Cena zależna od liczby badanych produktów.",
       },
       {
         "@type": "MedicalTest",
-        name: "Food Print 200+",
+        name: "Analiza niedoborów witamin i minerałów",
         description:
-          "Laboratoryjny test IgG w technologii mikromacierzy na 222 alergeny pokarmowe.",
-      },
-      {
-        "@type": "MedicalTest",
-        name: "Diacom 3D — Health Diagnostic Scanner",
-        description:
-          "Bioreznoansowa diagnostyka funkcjonalna pozwalająca ocenić stan układów organizmu — komplementarna do badań laboratoryjnych.",
+          "Ocena niedoborów (m.in. żelazo, B12, kwas foliowy) wraz z indywidualnym planem suplementacji.",
       },
     ],
     sameAs: [SITE.social.facebook].filter(Boolean),

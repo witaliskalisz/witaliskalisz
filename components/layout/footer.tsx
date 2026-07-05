@@ -2,7 +2,6 @@ import Link from "next/link";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { SITE, NAVIGATION } from "@/lib/site";
 import { Logo } from "./logo";
-import { NewsletterForm } from "@/components/forms/newsletter-form";
 import { Separator } from "@/components/ui/separator";
 
 export function Footer() {
@@ -14,10 +13,10 @@ export function Footer() {
           <div className="lg:col-span-5">
             <Logo />
             <p className="mt-6 text-sm leading-relaxed text-muted-foreground max-w-md">
-              Premium diagnostyka funkcjonalna i prewencyjna w Kaliszu. Mikroskopowe badanie żywej
-              kropli krwi, testy nietolerancji pokarmowych IgG (FoodDetective™, Food Print 200+)
-              oraz skaner Diacom 3D. Metody komplementarne, nie zastępują badań laboratoryjnych
-              ani konsultacji lekarskiej.
+              Prywatna diagnostyka funkcjonalna i prewencyjna w Kaliszu. Mikroskopowe badanie żywej
+              kropli krwi, testy nietolerancji pokarmowych IgG (FoodDetective™) oraz analiza
+              niedoborów. Metody komplementarne, nie zastępują badań laboratoryjnych ani
+              konsultacji lekarskiej.
             </p>
             <div className="mt-8 space-y-3 text-sm">
               <a
@@ -48,19 +47,10 @@ export function Footer() {
                 <span>{SITE.contact.hoursRegistration}</span>
               </div>
             </div>
-            <div className="mt-10">
-              <h4 className="text-sm font-semibold mb-3">Newsletter zdrowia</h4>
-              <p className="text-xs text-muted-foreground mb-4 max-w-sm">
-                Raz w miesiącu — esencja wiedzy o niedoborach, jelitach, hormonach i regeneracji.
-                Bez spamu, zawsze możesz się wypisać.
-              </p>
-              <NewsletterForm />
-            </div>
           </div>
 
-          <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8">
             <FooterColumn title="Diagnostyka" items={NAVIGATION.footer.diagnostyka} />
-            <FooterColumn title="Dla kogo" items={NAVIGATION.footer.offerings} />
             <FooterColumn title="Witalis" items={NAVIGATION.footer.company} />
             <FooterColumn title="Informacje" items={NAVIGATION.footer.legal} />
           </div>

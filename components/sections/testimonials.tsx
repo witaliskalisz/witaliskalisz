@@ -1,129 +1,90 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Star, Quote, ArrowLeft, ArrowRight, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
+import { Star, Quote, ExternalLink } from "lucide-react";
 import { Reveal } from "@/components/effects/reveal";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { TESTIMONIALS } from "@/lib/testimonials";
-import { getPackageBySlug } from "@/lib/packages";
+import { SITE } from "@/lib/site";
+
+const GOOGLE_REVIEWS_URL = `https://www.google.com/maps/search/${encodeURIComponent(
+  "Witalis " + SITE.address.fullLine
+)}`;
 
 export function Testimonials() {
-  const [active, setActive] = useState(0);
-  const t = TESTIMONIALS[active];
-  const pkg = getPackageBySlug(t.packageSlug);
-
-  function next() {
-    setActive((a) => (a + 1) % TESTIMONIALS.length);
-  }
-  function prev() {
-    setActive((a) => (a - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
-  }
-
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden" id="opinie">
+    <section className="py-16 md:py-28 relative overflow-hidden" id="opinie">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-20 left-1/2 -translate-x-1/2 size-[700px] rounded-full bg-gradient-radial from-primary/10 to-transparent blur-3xl" />
+        <div className="absolute -top-20 left-1/2 -translate-x-1/2 size-[600px] rounded-full bg-gradient-radial from-primary/10 to-transparent blur-3xl" />
       </div>
       <div className="container">
-        <Reveal className="text-center max-w-3xl mx-auto mb-12 space-y-5">
+        <Reveal className="text-center max-w-2xl mx-auto mb-10 md:mb-14 space-y-4">
           <Badge variant="outline" className="text-[11px] uppercase tracking-[0.18em]">
-            08 · Co mówią klienci
+            05 · Opinie z Google
           </Badge>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-balance">
-            <span className="italic font-normal text-muted-foreground">Historie ludzi,</span>
-            <br />którzy nie odpuścili
+          <h2 className="font-display text-3xl md:text-5xl leading-[1.05] tracking-tight text-balance">
+            Co mówią
+            <span className="italic font-normal text-muted-foreground"> nasi klienci</span>
           </h2>
-        </Reveal>
-
-        <div className="max-w-5xl mx-auto">
-          <div className="relative">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={t.id}
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -30 }}
-                transition={{ duration: 0.4 }}
-                className="grid lg:grid-cols-12 gap-10 items-center"
-              >
-                <div className="lg:col-span-7 space-y-6">
-                  <Quote className="size-12 text-primary/40" />
-                  <p className="font-display text-2xl md:text-3xl leading-snug text-balance">
-                    „{t.quote}"
-                  </p>
-                  {t.result && (
-                    <div className="inline-flex items-center gap-2 rounded-full border border-success/30 bg-success/10 px-4 py-2 text-sm font-medium text-success">
-                      <span className="size-1.5 rounded-full bg-success" /> {t.result}
-                    </div>
-                  )}
-                  <div className="pt-2">
-                    <p className="font-semibold">{t.name}, {t.age}</p>
-                    <p className="text-sm text-muted-foreground">{t.role}</p>
-                    <div className="flex items-center gap-1.5 mt-1 text-xs text-muted-foreground">
-                      <MapPin className="size-3" />
-                      <span>{t.city}</span>
-                      {pkg && (
-                        <>
-                          <span className="text-border">·</span>
-                          <span>Pakiet: {pkg.name}</span>
-                        </>
-                      )}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="lg:col-span-5">
-                  <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-primary/20 via-card to-[hsl(var(--neon))]/15 border border-border/50">
-                    <Avatar id={t.id} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                    <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
-                      <div className="flex gap-0.5">
-                        {Array.from({ length: t.rating }).map((_, i) => (
-                          <Star key={i} className="size-4 fill-amber-400 text-amber-400" />
-                        ))}
-                      </div>
-                      {t.demo && (
-                        <Badge variant="glass" className="text-[9px] backdrop-blur-md">
-                          DEMO
-                        </Badge>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          <div className="mt-10 flex items-center justify-between">
-            <div className="flex gap-1.5">
-              {TESTIMONIALS.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActive(i)}
-                  aria-label={`Opinia ${i + 1}`}
-                  className={`h-1.5 rounded-full transition-all ${
-                    i === active ? "w-8 bg-primary" : "w-1.5 bg-border hover:bg-foreground/30"
-                  }`}
-                />
+          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+            <div className="flex">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <Star key={i} className="size-4 fill-amber-400 text-amber-400" />
               ))}
             </div>
-            <div className="flex gap-2">
-              <Button variant="outline" size="icon" onClick={prev} aria-label="Poprzednia opinia">
-                <ArrowLeft className="size-4" />
-              </Button>
-              <Button variant="outline" size="icon" onClick={next} aria-label="Następna opinia">
-                <ArrowRight className="size-4" />
-              </Button>
-            </div>
+            <span>
+              <strong className="text-foreground">4,9</strong> · opinie w Google
+            </span>
           </div>
+        </Reveal>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+          {TESTIMONIALS.map((t, i) => (
+            <motion.div
+              key={t.id}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+            >
+              <Card className="h-full">
+                <CardContent className="p-6 flex flex-col h-full">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex gap-0.5">
+                      {Array.from({ length: t.rating }).map((_, s) => (
+                        <Star key={s} className="size-4 fill-amber-400 text-amber-400" />
+                      ))}
+                    </div>
+                    <GoogleGlyph />
+                  </div>
+                  <Quote className="size-6 text-primary/30 mb-2" />
+                  <p className="text-sm leading-relaxed text-foreground/85 flex-1">{t.quote}</p>
+                  <div className="mt-5 flex items-center justify-between">
+                    <p className="text-sm font-semibold">{t.name}</p>
+                    {t.demo && (
+                      <Badge variant="glass" className="text-[9px]">
+                        DEMO
+                      </Badge>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
         </div>
 
-        <Reveal delay={0.2}>
-          <p className="text-[11px] text-center text-muted-foreground mt-10 max-w-2xl mx-auto">
-            Opinie oznaczone „DEMO" to placeholdery — przed publikacją zostaną zastąpione
-            prawdziwymi historiami klientów, po uzyskaniu pełnej zgody marketingowej zgodnie z RODO.
+        <Reveal delay={0.2} className="mt-10 text-center">
+          <Button asChild variant="outline" size="lg">
+            <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer">
+              Zobacz wszystkie opinie w Google
+              <ExternalLink className="size-4" />
+            </a>
+          </Button>
+          <p className="text-[11px] text-muted-foreground mt-6 max-w-xl mx-auto">
+            Opinie oznaczone „DEMO" to placeholdery — przed publikacją zostaną zastąpione realnymi
+            opiniami klientów z profilu Google.
           </p>
         </Reveal>
       </div>
@@ -131,23 +92,25 @@ export function Testimonials() {
   );
 }
 
-function Avatar({ id }: { id: string }) {
+function GoogleGlyph() {
   return (
-    <div className="absolute inset-0 flex items-center justify-center">
-      <svg viewBox="0 0 200 200" className="size-full" aria-hidden>
-        <defs>
-          <linearGradient id={`av-${id}`} x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stopColor="hsl(var(--primary))" stopOpacity="0.7" />
-            <stop offset="1" stopColor="hsl(var(--neon))" stopOpacity="0.5" />
-          </linearGradient>
-        </defs>
-        <circle cx="100" cy="78" r="40" fill={`url(#av-${id})`} />
-        <path
-          d="M 30 200 Q 30 130 100 130 Q 170 130 170 200 Z"
-          fill={`url(#av-${id})`}
-        />
-        <circle cx="100" cy="100" r="100" fill="white" opacity="0.1" />
-      </svg>
-    </div>
+    <svg viewBox="0 0 24 24" className="size-5" aria-label="Google" role="img">
+      <path
+        fill="#4285F4"
+        d="M23.52 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47a5.53 5.53 0 0 1-2.4 3.63v3h3.88c2.27-2.09 3.57-5.17 3.57-8.87Z"
+      />
+      <path
+        fill="#34A853"
+        d="M12 24c3.24 0 5.96-1.08 7.95-2.91l-3.88-3c-1.08.72-2.45 1.15-4.07 1.15-3.13 0-5.78-2.11-6.73-4.96H1.26v3.09A12 12 0 0 0 12 24Z"
+      />
+      <path
+        fill="#FBBC05"
+        d="M5.27 14.28a7.2 7.2 0 0 1 0-4.56V6.63H1.26a12 12 0 0 0 0 10.74l4.01-3.09Z"
+      />
+      <path
+        fill="#EA4335"
+        d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.44-3.44A11.95 11.95 0 0 0 12 0 12 12 0 0 0 1.26 6.63l4.01 3.09C6.22 6.86 8.87 4.75 12 4.75Z"
+      />
+    </svg>
   );
 }

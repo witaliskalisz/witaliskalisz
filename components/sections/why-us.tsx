@@ -18,13 +18,13 @@ const REASONS = [
   {
     icon: Crown,
     title: "Jedyna taka w regionie kaliskim",
-    desc: "Jedyne miejsce w Wielkopolsce południowej, które łączy mikroskopię żywej kropli krwi, testy IgG Food Print 200+ i skaner Diacom 3D pod jednym dachem.",
+    desc: "Jedno z niewielu miejsc w Wielkopolsce południowej, gdzie mikroskopię żywej kropli krwi łączymy z testami nietolerancji IgG i analizą niedoborów pod jednym dachem.",
     accent: "from-amber-500/15 to-amber-400/0",
   },
   {
     icon: Microscope,
     title: "Sprzęt klasy laboratoryjnej",
-    desc: "Mikroskop z kamerą cyfrową do powiększenia 1600×, Diacom 3D Health Scanner, certyfikowany system FoodDetective. Nie tabliczki magnetyczne, prawdziwa diagnostyka.",
+    desc: "Mikroskop z kamerą cyfrową do powiększenia 1600× oraz certyfikowany system testów nietolerancji FoodDetective™. Prawdziwa diagnostyka, którą widzisz na własne oczy.",
     accent: "from-blue-500/15 to-blue-400/0",
   },
   {
@@ -36,7 +36,7 @@ const REASONS = [
   {
     icon: Timer,
     title: "Szybkie wyniki",
-    desc: "Mikroskopia i Diacom — efekt natychmiastowy podczas wizyty. FoodDetective — wynik za 40 minut. Najdłużej Food Print 200+ — 10-14 dni roboczych z laboratorium.",
+    desc: "Mikroskopia żywej kropli krwi — efekt natychmiastowy podczas wizyty. Test nietolerancji FoodDetective™ — wynik już po ok. 40 minutach, jeszcze w gabinecie.",
     accent: "from-cyan-500/15 to-cyan-400/0",
   },
   {
@@ -55,7 +55,7 @@ const REASONS = [
 
 const STATS = [
   { value: SITE.clientsServed, suffix: "+", label: "klientów od 2018 roku" },
-  { value: 222, suffix: "", label: "alergenów w Food Print 200+" },
+  { value: 7, suffix: " lat", label: "doświadczenia w praktyce" },
   { value: 59, suffix: "", label: "produktów w FoodDetective™" },
   { value: 1600, suffix: "×", label: "powiększenie mikroskopu" },
 ];
@@ -66,16 +66,16 @@ export function WhyUs() {
       <div className="container">
         <Reveal className="text-center max-w-3xl mx-auto mb-16 space-y-5">
           <Badge variant="outline" className="text-[11px] uppercase tracking-[0.18em]">
-            07 · Dlaczego Witalis
+            Dlaczego Witalis
           </Badge>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-balance">
-            <span className="italic font-normal text-muted-foreground">Premium</span> nie jest
+            Konkret
             <br />
-            buzzwordem.
+            <span className="italic font-normal text-muted-foreground">zamiast obietnic.</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Właścicielka prowadzi Witalis od 2018 roku. Solo, bo każdy klient zasługuje na pełną uwagę
-            — a nie zmiany asystentów co kwartał.
+            Właścicielka prowadzi Witalis od 2018 roku. Osobiście — bo każdy klient zasługuje na
+            pełną uwagę i wyniki wytłumaczone prostym językiem.
           </p>
         </Reveal>
 

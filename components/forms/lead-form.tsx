@@ -31,8 +31,6 @@ type FormData = z.infer<typeof schema>;
 const TOPICS = [
   { value: "consult", label: "Chcę umówić konsultację" },
   { value: "package", label: "Mam pytanie o pakiet" },
-  { value: "b2b", label: "Oferta dla firmy" },
-  { value: "sport", label: "Oferta dla klubu sportowego" },
   { value: "other", label: "Inne" },
 ];
 

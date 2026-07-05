@@ -40,7 +40,6 @@ export default function PolitykaPage() {
             <ul className="list-disc ml-6 space-y-2">
               <li>obsługa zapytań i kontaktu (art. 6 ust. 1 lit. b i f RODO),</li>
               <li>realizacja umowy o świadczenie usług diagnostycznych (art. 6 ust. 1 lit. b RODO oraz art. 9 ust. 2 lit. h dla danych dotyczących zdrowia),</li>
-              <li>wysyłka newslettera — wyłącznie po wyrażeniu zgody (art. 6 ust. 1 lit. a RODO),</li>
               <li>spełnienie obowiązków księgowo-podatkowych (art. 6 ust. 1 lit. c RODO).</li>
             </ul>
           </section>

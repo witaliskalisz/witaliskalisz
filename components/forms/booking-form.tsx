@@ -166,7 +166,7 @@ export function BookingForm({ initialPackageSlug }: { initialPackageSlug?: strin
                   <h2 className="font-display text-3xl md:text-4xl mt-3">Wybierz pakiet</h2>
                   <p className="text-muted-foreground mt-2">Możesz to później zmienić — to wstępny wybór.</p>
                 </div>
-                <div className="grid sm:grid-cols-2 gap-3 max-h-[420px] overflow-y-auto pr-2">
+                <div className="grid sm:grid-cols-2 gap-3">
                   {PACKAGES.map((p) => (
                     <button
                       type="button"

@@ -16,7 +16,7 @@ export function FaqSection() {
           <div className="lg:col-span-4">
             <Reveal className="lg:sticky lg:top-32 space-y-6">
               <Badge variant="outline" className="text-[11px] uppercase tracking-[0.18em]">
-                <MessageCircleQuestion className="size-3" /> 11 · Pytania
+                <MessageCircleQuestion className="size-3" /> 07 · Pytania
               </Badge>
               <h2 className="font-display text-4xl md:text-5xl leading-[1.05] tracking-tight text-balance">
                 Wszystko,

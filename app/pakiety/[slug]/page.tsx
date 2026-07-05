@@ -69,6 +69,9 @@ export default async function PackagePage({ params }: { params: Promise<{ slug: 
                 <span className="font-display text-5xl">{pkg.metadata.priceLabel}</span>
                 <span className="text-muted-foreground">· {pkg.duration}</span>
               </div>
+              {pkg.metadata.priceNote && (
+                <p className="text-sm text-muted-foreground">{pkg.metadata.priceNote}</p>
+              )}
             </Reveal>
 
             <Reveal delay={0.1}>
@@ -134,7 +137,7 @@ export default async function PackagePage({ params }: { params: Promise<{ slug: 
 
             {related.length > 0 && (
               <Reveal delay={0.3} className="pt-8 border-t border-border/50">
-                <h2 className="font-display text-2xl mb-6">Inne pakiety w tej kategorii</h2>
+                <h2 className="font-display text-2xl mb-6">Pozostałe pakiety</h2>
                 <div className="grid sm:grid-cols-3 gap-3">
                   {related.map((r) => (
                     <Link

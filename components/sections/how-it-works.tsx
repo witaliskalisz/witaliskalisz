@@ -24,14 +24,14 @@ const STEPS = [
     n: "03",
     icon: Microscope,
     title: "Wykonujemy badania",
-    desc: "60-120 minut w gabinecie. Mikroskopowe badanie żywej kropli krwi, testy nietolerancji (gdy w pakiecie), skanowanie Diacom 3D. Wyniki widzisz natychmiast na ekranie.",
+    desc: "60-120 minut w gabinecie. Mikroskopowe badanie żywej kropli krwi oraz test nietolerancji pokarmowych (gdy w pakiecie). Obraz krwi widzisz natychmiast na ekranie.",
     duration: "60-120 min",
   },
   {
     n: "04",
     icon: FileSearch,
     title: "Analiza i diagnoza",
-    desc: "Omawiamy każdy wynik — pokazujemy zdjęcia preparatu krwi, mapę z Diacom 3D, listę nietolerowanych produktów. Niczego nie ukrywamy. Wszystko zrozumiałe.",
+    desc: "Omawiamy każdy wynik — pokazujemy zdjęcia preparatu krwi i listę nietolerowanych produktów. Niczego nie ukrywamy. Wszystko wyjaśnione prostym językiem.",
     duration: "30-60 min",
   },
   {
@@ -53,7 +53,7 @@ export function HowItWorks() {
       <div className="container">
         <Reveal className="text-center max-w-3xl mx-auto mb-16 space-y-5">
           <Badge variant="outline" className="text-[11px] uppercase tracking-[0.18em]">
-            02 · Jak to działa
+            03 · Jak to działa
           </Badge>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-balance">
             <span className="italic font-normal text-muted-foreground">Od pytania</span> do planu

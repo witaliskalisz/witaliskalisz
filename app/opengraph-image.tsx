@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Witalis — Premium diagnostyka zdrowia w Kaliszu";
+export const alt = "Witalis — Prywatna diagnostyka zdrowia w Kaliszu";
 
 export default async function OGImage() {
   return new ImageResponse(
@@ -51,7 +51,7 @@ export default async function OGImage() {
                 lineHeight: 1,
               }}
             >
-              Diagnostyka premium
+              Mikroskopia żywej krwi · Kalisz
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ interface PageMeta {
 }
 
 export function buildMetadata({ title, description, path = "/", ogImage }: PageMeta = {}): Metadata {
-  const fullTitle = title ? `${title} · ${SITE.name}` : `${SITE.name} — Premium diagnostyka zdrowia w Kaliszu`;
+  const fullTitle = title ? `${title} · ${SITE.name}` : `${SITE.name} — Prywatna diagnostyka zdrowia w Kaliszu`;
   const desc = description || SITE.description;
   const url = `${SITE.url}${path}`;
   const image = ogImage || SITE.ogImage;
@@ -23,13 +23,10 @@ export function buildMetadata({ title, description, path = "/", ogImage }: PageM
       "badanie żywej kropli krwi Kalisz",
       "nietolerancja pokarmowa Kalisz",
       "FoodDetective Kalisz",
-      "Food Print 200+ Kalisz",
-      "Diacom 3D Kalisz",
       "diagnostyka niedoborów Kalisz",
       "witamina D Kalisz",
-      "diagnostyka funkcjonalna",
-      "badania krwi sportowca",
-      "badania dla pracowników",
+      "diagnostyka funkcjonalna Kalisz",
+      "analiza krwi Kalisz",
       "Witalis Kalisz",
     ],
     openGraph: {

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   Award,
@@ -19,7 +20,7 @@ const QUALIFICATIONS = [
   { icon: Calendar, label: "7+ lat doświadczenia", sub: "od 2018" },
   { icon: Microscope, label: "Mikroskopia żywej krwi", sub: "specjalizacja" },
   { icon: Stethoscope, label: "FoodDetective™", sub: "certyfikat" },
-  { icon: Award, label: "Diacom 3D Scanner", sub: "operator" },
+  { icon: Award, label: "Plany suplementacyjne", sub: "indywidualne" },
 ];
 
 const VALUES = [
@@ -36,7 +37,7 @@ const VALUES = [
   {
     icon: GraduationCap,
     title: "Ciągły rozwój",
-    desc: "Regularne szkolenia z dietetyki funkcjonalnej, sport science i microbiomu.",
+    desc: "Regularne szkolenia z dietetyki funkcjonalnej, mikrobiomu i suplementacji.",
   },
 ];
 
@@ -50,7 +51,7 @@ export function Team() {
       <div className="container">
         <Reveal className="text-center max-w-3xl mx-auto mb-16 space-y-5">
           <Badge variant="outline" className="text-[11px] uppercase tracking-[0.18em]">
-            09 · Poznaj właścicielkę
+            06 · Poznaj właścicielkę
           </Badge>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-balance">
             Jedna osoba.
@@ -70,38 +71,17 @@ export function Team() {
               {/* Photo */}
               <div className="lg:col-span-5">
                 <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-primary/15 via-card to-[hsl(var(--neon))]/10 border border-border/50 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.25)]">
-                  {/* Placeholder portrait illustration */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <svg viewBox="0 0 200 250" className="w-full h-full" aria-hidden>
-                      <defs>
-                        <linearGradient id="portrait-bg" x1="0" y1="0" x2="0" y2="1">
-                          <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.3" />
-                          <stop offset="100%" stopColor="hsl(var(--neon))" stopOpacity="0.15" />
-                        </linearGradient>
-                        <linearGradient id="portrait-fig" x1="0" y1="0" x2="1" y2="1">
-                          <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.85" />
-                          <stop offset="100%" stopColor="hsl(var(--neon))" stopOpacity="0.65" />
-                        </linearGradient>
-                      </defs>
-                      <rect width="200" height="250" fill="url(#portrait-bg)" />
-                      <circle cx="100" cy="92" r="46" fill="url(#portrait-fig)" />
-                      <path
-                        d="M 18 260 Q 18 158 100 158 Q 182 158 182 260 Z"
-                        fill="url(#portrait-fig)"
-                      />
-                    </svg>
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-                  <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                    <Badge variant="glass" className="text-[9px] backdrop-blur-md">
-                      [DODAJ ZDJĘCIE]
-                    </Badge>
-                  </div>
+                  <Image
+                    src="/wlascicielka.jpg"
+                    alt="Właścicielka Witalis — specjalistka diagnostyki funkcjonalnej"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-cover object-center"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
                   <div className="absolute bottom-5 left-5 right-5">
-                    <p className="font-display text-2xl text-background drop-shadow">
-                      [Imię i nazwisko]
-                    </p>
-                    <p className="text-xs uppercase tracking-[0.18em] text-background/80 mt-1">
+                    <p className="text-xs uppercase tracking-[0.18em] text-background/90">
                       Założycielka · Specjalistka diagnostyki funkcjonalnej
                     </p>
                   </div>
@@ -135,26 +115,23 @@ export function Team() {
                 <div className="relative">
                   <Quote className="size-8 text-primary/30 absolute -top-2 -left-1" />
                   <p className="font-display text-2xl md:text-[28px] leading-snug text-pretty pl-8 italic">
-                    „[Tu wstawisz osobistą wypowiedź właścicielki — np. dlaczego zaczęła się
-                    zajmować diagnostyką funkcjonalną, jaka jest jej filozofia pracy z klientem,
-                    co ją wyróżnia.]"
+                    „Każda osoba przychodzi z inną historią, dlatego nie pracuję według jednego
+                    schematu. Poświęcam czas na rozmowę, analizę i wyjaśnienie wyników prostym
+                    językiem, tak aby klient wiedział, od czego realnie zacząć."
                   </p>
                 </div>
 
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    <strong className="text-foreground">Doświadczenie:</strong> [Tu opis ścieżki
-                    zawodowej — wykształcenie, ile lat w branży, jakie szkolenia, certyfikaty.]
+                    <strong className="text-foreground">Filozofia pracy:</strong> Stawiam na spokojną
+                    rozmowę, indywidualne podejście i jasne wyjaśnienie wyników. Nie pracuję według
+                    gotowego schematu — każda konsultacja jest dopasowana do stylu życia, objawów,
+                    historii zdrowotnej i realnych możliwości klienta.
                   </p>
                   <p>
                     <strong className="text-foreground">Specjalizacja:</strong> Mikroskopia żywej
-                    kropli krwi, testy nietolerancji pokarmowych IgG (FoodDetective™, Food Print
-                    200+), funkcjonalna diagnostyka Diacom 3D, indywidualne plany suplementacyjne.
-                  </p>
-                  <p>
-                    <strong className="text-foreground">Filozofia pracy:</strong> [Tu kilka zdań
-                    o podejściu — np. „indywidualne traktowanie każdego klienta, czas na rozmowę,
-                    plan dopasowany do realiów życia, a nie szablon."]
+                    kropli krwi, testy nietolerancji pokarmowych IgG (FoodDetective™) oraz
+                    indywidualne plany suplementacyjne i dietetyczne.
                   </p>
                 </div>
 
@@ -195,13 +172,6 @@ export function Team() {
                 <p className="text-sm text-muted-foreground leading-relaxed">{v.desc}</p>
               </motion.div>
             ))}
-          </Reveal>
-
-          <Reveal delay={0.35}>
-            <p className="text-[11px] text-center text-muted-foreground mt-10 max-w-2xl mx-auto italic">
-              Sekcja zaprojektowana do uzupełnienia danymi rzeczywistymi — wstaw zdjęcie portretowe,
-              imię i nazwisko, treść osobistego cytatu i opis ścieżki zawodowej.
-            </p>
           </Reveal>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Fraunces } from "next/font/google";
+import { Inter, Fraunces, Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Nav } from "@/components/layout/nav";
@@ -25,6 +25,13 @@ const fraunces = Fraunces({
   display: "swap",
 });
 
+const poppins = Poppins({
+  subsets: ["latin", "latin-ext"],
+  weight: ["500", "600", "700"],
+  variable: "--font-logo",
+  display: "swap",
+});
+
 export const metadata: Metadata = buildMetadata();
 
 export const viewport: Viewport = {
@@ -42,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pl" suppressHydrationWarning className={`${inter.variable} ${fraunces.variable}`}>
+    <html lang="pl" suppressHydrationWarning className={`${inter.variable} ${fraunces.variable} ${poppins.variable}`}>
       <head>
         <script
           type="application/ld+json"
