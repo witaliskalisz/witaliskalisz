@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/hero";
+import { OwnerIntro } from "@/components/sections/owner-intro";
 import { Packages } from "@/components/sections/packages";
 import { Problems } from "@/components/sections/problems";
 import { HowItWorks } from "@/components/sections/how-it-works";
@@ -12,6 +13,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <OwnerIntro />
       <Packages />
       <Problems />
       <HowItWorks />

@@ -8,9 +8,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     "",
     "/pakiety",
+    "/badanie-zywej-kropli-krwi",
     "/o-nas",
     "/kontakt",
-    "/umow-konsultacje",
     "/polityka-prywatnosci",
     "/regulamin",
   ].map((path) => ({

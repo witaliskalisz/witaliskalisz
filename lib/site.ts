@@ -11,6 +11,11 @@ export const SITE = {
   founded: 2018,
   clientsServed: 1240,
 
+  owner: {
+    name: "Majka Sośnicka",
+    title: "Właściciel Witalis",
+  },
+
   address: {
     street: "ul. Babina 6",
     city: "Kalisz",
@@ -30,9 +35,8 @@ export const SITE = {
   },
 
   social: {
-    facebook:
-      "https://www.facebook.com/pages/Witalis-Mikroskopowe-Badanie-%C5%BBywej-Kropli-Krwi/1447099678929932",
-    instagram: "",
+    facebook: "https://www.facebook.com/WitalisKalisz/",
+    instagram: "https://www.instagram.com/witalis.kalisz/",
     youtube: "",
   },
 
@@ -52,13 +56,13 @@ export const NAVIGATION = {
   footer: {
     diagnostyka: [
       { label: "Wszystkie pakiety", href: "/pakiety" },
+      { label: "Badanie żywej kropli krwi", href: "/badanie-zywej-kropli-krwi" },
       { label: "Start — żywa kropla krwi", href: "/pakiety/start" },
       { label: "Gut Health — nietolerancje", href: "/pakiety/gut-health" },
       { label: "Witaminy & minerały", href: "/pakiety/vitamins" },
     ],
     company: [
       { label: "O nas", href: "/o-nas" },
-      { label: "Umów konsultację", href: "/umow-konsultacje" },
       { label: "Kontakt", href: "/kontakt" },
     ],
     legal: [

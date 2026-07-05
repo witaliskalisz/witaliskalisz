@@ -40,11 +40,11 @@ export function FinalCta() {
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
             <MagneticButton>
-              <Button asChild variant="primary" size="xl" className="min-w-[220px]">
-                <Link href="/umow-konsultacje">
-                  Umów konsultację
-                  <ArrowRight className="size-4" />
-                </Link>
+              <Button asChild variant="primary" size="xl" className="min-w-[240px]">
+                <a href={`tel:${SITE.contact.phone}`}>
+                  <Phone className="size-4" />
+                  Zadzwoń: {SITE.contact.phoneDisplay}
+                </a>
               </Button>
             </MagneticButton>
             <Button
@@ -53,10 +53,10 @@ export function FinalCta() {
               size="xl"
               className="border-white/15 bg-white/5 backdrop-blur-md hover:bg-white/10 text-background"
             >
-              <a href={`tel:${SITE.contact.phone}`}>
-                <Phone className="size-4" />
-                {SITE.contact.phoneDisplay}
-              </a>
+              <Link href="/kontakt">
+                Napisz do nas
+                <ArrowRight className="size-4" />
+              </Link>
             </Button>
           </div>
 

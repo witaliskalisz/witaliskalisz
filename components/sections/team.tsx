@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { Reveal } from "@/components/effects/reveal";
 import { Badge } from "@/components/ui/badge";
+import { SITE } from "@/lib/site";
 
 const QUALIFICATIONS = [
   { icon: Calendar, label: "7+ lat doświadczenia", sub: "od 2018" },
@@ -76,13 +77,17 @@ export function Team() {
                     alt="Właścicielka Witalis — specjalistka diagnostyki funkcjonalnej"
                     fill
                     sizes="(max-width: 1024px) 100vw, 40vw"
+                    quality={95}
                     className="object-cover object-center"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                   <div className="absolute bottom-5 left-5 right-5">
-                    <p className="text-xs uppercase tracking-[0.18em] text-background/90">
-                      Założycielka · Specjalistka diagnostyki funkcjonalnej
+                    <p className="font-display text-2xl text-background drop-shadow">
+                      {SITE.owner.name}
+                    </p>
+                    <p className="text-xs uppercase tracking-[0.18em] text-background/85 mt-1">
+                      {SITE.owner.title} · Diagnostyka funkcjonalna
                     </p>
                   </div>
                 </div>
@@ -118,6 +123,9 @@ export function Team() {
                     „Każda osoba przychodzi z inną historią, dlatego nie pracuję według jednego
                     schematu. Poświęcam czas na rozmowę, analizę i wyjaśnienie wyników prostym
                     językiem, tak aby klient wiedział, od czego realnie zacząć."
+                  </p>
+                  <p className="mt-4 pl-8 text-sm font-medium text-muted-foreground">
+                    — {SITE.owner.name}, {SITE.owner.title}
                   </p>
                 </div>
 

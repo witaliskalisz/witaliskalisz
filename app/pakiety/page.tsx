@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowRight, Check, Sparkles, Phone } from "lucide-react";
+import { Check, Sparkles, Phone } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -93,9 +93,9 @@ export default function PakietyPage() {
                     <Link href={`/pakiety/${p.slug}`}>Szczegóły</Link>
                   </Button>
                   <Button asChild variant="primary" size="sm">
-                    <Link href={`/umow-konsultacje?pakiet=${p.slug}`}>
-                      Wybierz <ArrowRight className="size-3.5" />
-                    </Link>
+                    <a href={`tel:${SITE.contact.phone}`}>
+                      <Phone className="size-3.5" /> Zadzwoń
+                    </a>
                   </Button>
                 </div>
               </CardContent>

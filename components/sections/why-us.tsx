@@ -12,7 +12,6 @@ import {
 import { Reveal } from "@/components/effects/reveal";
 import { Badge } from "@/components/ui/badge";
 import { AnimatedNumber } from "@/components/effects/animated-number";
-import { SITE } from "@/lib/site";
 
 const REASONS = [
   {
@@ -54,7 +53,7 @@ const REASONS = [
 ];
 
 const STATS = [
-  { value: SITE.clientsServed, suffix: "+", label: "klientów od 2018 roku" },
+  { value: 100, suffix: "%", label: "wizyt prowadzi właścicielka" },
   { value: 7, suffix: " lat", label: "doświadczenia w praktyce" },
   { value: 59, suffix: "", label: "produktów w FoodDetective™" },
   { value: 1600, suffix: "×", label: "powiększenie mikroskopu" },

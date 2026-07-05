@@ -67,7 +67,7 @@ export function medicalBusinessSchema() {
           "Ocena niedoborów (m.in. żelazo, B12, kwas foliowy) wraz z indywidualnym planem suplementacji.",
       },
     ],
-    sameAs: [SITE.social.facebook].filter(Boolean),
+    sameAs: [SITE.social.facebook, SITE.social.instagram].filter(Boolean),
   };
 }
 

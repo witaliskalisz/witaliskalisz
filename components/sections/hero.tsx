@@ -41,9 +41,8 @@ export function Hero() {
             className="flex flex-col items-center gap-5"
           >
             <div className="flex items-center gap-4 md:gap-5">
-              <span className="relative inline-flex items-center justify-center size-[64px] md:size-[80px] rounded-3xl bg-gradient-to-br from-primary to-[hsl(var(--neon))] shadow-[0_16px_50px_-12px_hsl(var(--primary)/0.55)]">
-                <BrandMark className="size-9 md:size-12 text-primary-foreground" />
-                <span className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-primary to-[hsl(var(--neon))] opacity-30 blur-xl -z-10" />
+              <span className="relative inline-flex size-[64px] md:size-[80px]">
+                <BrandMark className="size-full" />
               </span>
               <span className="font-logo text-[clamp(3.5rem,9vw,7rem)] leading-none tracking-[-0.03em] font-semibold">
                 Witalis
@@ -132,8 +131,8 @@ export function Hero() {
               </Button>
             </MagneticButton>
             <Button asChild variant="outline" size="xl" className="w-full sm:w-auto">
-              <Link href="/umow-konsultacje">
-                Umów online
+              <Link href="/kontakt">
+                Napisz do nas
                 <ArrowRight className="size-4" />
               </Link>
             </Button>
@@ -161,10 +160,7 @@ export function Hero() {
             <div className="flex items-center gap-2 text-muted-foreground">
               <Users className="size-4" />
               <span>
-                <strong className="text-foreground">
-                  {SITE.clientsServed.toLocaleString("pl-PL")}+
-                </strong>{" "}
-                klientów
+                <strong className="text-foreground">Setki</strong> zadowolonych klientów
               </span>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">

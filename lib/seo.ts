@@ -55,8 +55,8 @@ export function buildMetadata({ title, description, path = "/", ogImage }: PageM
       },
     },
     icons: {
-      icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-      apple: "/apple-icon.png",
+      icon: "/logo-mark.png",
+      apple: "/logo-mark.png",
     },
     formatDetection: {
       telephone: true,

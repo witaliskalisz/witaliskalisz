@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { ArrowLeft, ArrowRight, Check, Clock, Sparkles, Target, Users } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Clock, Phone, Sparkles, Target, Users } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Reveal } from "@/components/effects/reveal";
-import { LeadForm } from "@/components/forms/lead-form";
 import { PACKAGES, getPackageBySlug } from "@/lib/packages";
+import { SITE } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 
@@ -74,8 +74,15 @@ export default async function PackagePage({ params }: { params: Promise<{ slug: 
               )}
             </Reveal>
 
-            <Reveal delay={0.1}>
+            <Reveal delay={0.1} className="space-y-4">
               <p className="text-lg leading-relaxed text-pretty">{pkg.description}</p>
+              <Link
+                href="/badanie-zywej-kropli-krwi"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline underline-offset-4"
+              >
+                Jak wygląda badanie żywej kropli krwi?
+                <ArrowRight className="size-4" />
+              </Link>
             </Reveal>
 
             <Reveal delay={0.15}>
@@ -154,33 +161,42 @@ export default async function PackagePage({ params }: { params: Promise<{ slug: 
             )}
           </div>
 
-          {/* Sticky sidebar CTA */}
+          {/* Sticky sidebar CTA — kontakt telefoniczny */}
           <div className="lg:col-span-5">
             <div className="lg:sticky lg:top-28">
               <Reveal delay={0.2}>
                 <Card className="bg-gradient-to-br from-primary/5 via-card to-card">
-                  <CardContent className="p-8">
-                    <div className="space-y-2 mb-6">
+                  <CardContent className="p-8 space-y-6">
+                    <div className="space-y-2">
                       <Badge variant="success" className="text-[10px]">
-                        <Clock className="size-3" /> Szybka odpowiedź — 24h
+                        <Clock className="size-3" /> {SITE.contact.hoursRegistration}
                       </Badge>
-                      <h3 className="font-display text-2xl">Zamów ten pakiet</h3>
+                      <h3 className="font-display text-2xl">Zapytaj o ten pakiet</h3>
                       <p className="text-sm text-muted-foreground">
-                        Zostaw kontakt — oddzwonimy, by potwierdzić termin i odpowiedzieć na pytania.
+                        Wizyty umawiamy telefonicznie — zadzwoń, a dobierzemy termin i odpowiemy na
+                        wszystkie pytania. Wolisz napisać? Odezwij się mailowo lub w DM.
                       </p>
                     </div>
-                    <LeadForm defaultTopic="consult" />
+                    <a
+                      href={`tel:${SITE.contact.phone}`}
+                      className="block text-center font-display text-3xl tracking-tight hover:text-primary transition-colors"
+                    >
+                      {SITE.contact.phoneDisplay}
+                    </a>
+                    <Button asChild variant="primary" size="lg" className="w-full">
+                      <a href={`tel:${SITE.contact.phone}`}>
+                        <Phone className="size-4" /> Zadzwoń teraz
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline" size="lg" className="w-full">
+                      <Link href="/kontakt">
+                        E-mail / Facebook / Instagram
+                        <ArrowRight className="size-4" />
+                      </Link>
+                    </Button>
                   </CardContent>
                 </Card>
               </Reveal>
-              <div className="mt-4 text-center">
-                <Button asChild variant="primary" size="lg" className="w-full">
-                  <Link href={`/umow-konsultacje?pakiet=${pkg.slug}`}>
-                    Lub umów termin online
-                    <ArrowRight className="size-4" />
-                  </Link>
-                </Button>
-              </div>
             </div>
           </div>
         </div>

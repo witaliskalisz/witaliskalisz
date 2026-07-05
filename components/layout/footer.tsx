@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from "lucide-react";
 import { SITE, NAVIGATION } from "@/lib/site";
 import { Logo } from "./logo";
 import { Separator } from "@/components/ui/separator";
@@ -46,6 +46,30 @@ export function Footer() {
                 <Clock className="size-4 shrink-0" />
                 <span>{SITE.contact.hoursRegistration}</span>
               </div>
+            </div>
+            <div className="mt-6 flex items-center gap-3">
+              {SITE.social.facebook && (
+                <a
+                  href={SITE.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook Witalis"
+                  className="size-10 rounded-xl border border-border/60 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 transition-colors"
+                >
+                  <Facebook className="size-4" />
+                </a>
+              )}
+              {SITE.social.instagram && (
+                <a
+                  href={SITE.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram Witalis"
+                  className="size-10 rounded-xl border border-border/60 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 transition-colors"
+                >
+                  <Instagram className="size-4" />
+                </a>
+              )}
             </div>
           </div>
 

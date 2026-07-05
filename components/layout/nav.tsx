@@ -78,7 +78,7 @@ export function Nav() {
               </a>
             </Button>
             <Button asChild variant="outline" size="sm" className="hidden md:inline-flex">
-              <Link href="/umow-konsultacje">Umów online</Link>
+              <Link href="/kontakt">Napisz do nas</Link>
             </Button>
             <Button
               variant="ghost"
@@ -127,7 +127,7 @@ export function Nav() {
                   </a>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link href="/umow-konsultacje">Umów online</Link>
+                  <Link href="/kontakt">Napisz do nas</Link>
                 </Button>
               </div>
             </motion.div>

@@ -20,7 +20,7 @@ export const CANNED_TOPICS: CannedTopic[] = [
   {
     triggers: ["zapis", "rezerw", "umów", "wizyt", "termin", "kiedy"],
     answer:
-      "Rejestracja telefoniczna: 881 353 444, pon-pt 16:00-20:00. Pierwsza wizyta zwykle dostępna w 3-7 dni. Możesz też zostawić swoje dane w formularzu — oddzwonimy w ciągu 24h roboczych.",
+      "Rejestracja telefoniczna: 881 353 444, pon-pt 16:00-20:00. Pierwsza wizyta zwykle dostępna w 3-7 dni. Wolisz napisać? Odezwij się mailowo lub w wiadomości prywatnej na Facebooku / Instagramie.",
     followups: ["Gdzie jesteście?", "Co zabrać na wizytę?"],
   },
   {
