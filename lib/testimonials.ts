@@ -1,39 +1,36 @@
 export interface Testimonial {
   id: string;
-  /** Imię i inicjał — jak w opinii Google. */
+  /** Imię i nazwisko — jak w opinii Google. */
   name: string;
   rating: 5;
-  /** Treść opinii — do wklejenia z Google. */
+  /** Kiedy dodano opinię (jak w Google). */
+  when?: string;
+  /** Treść opinii z Google. */
   quote: string;
   /** Placeholder — do zastąpienia realną opinią przed publikacją. */
   demo: boolean;
 }
 
 /**
- * PLACEHOLDERY na opinie z Google.
- * Przed publikacją: wklej realne opinie klientów z profilu Google (Wizytówka Firmy).
- * Zostaw `demo: true` dopóki treść jest przykładowa — w UI pokazuje dyskretny badge „DEMO".
+ * Realne opinie klientów z profilu Google (Wizytówka Firmy).
  */
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: "g1",
-    name: "[Imię K.]",
+    name: "Kamila Jędrzejczak",
     rating: 5,
-    quote: "[Wklej treść opinii z Google.]",
-    demo: true,
+    when: "6 dni temu",
+    quote:
+      "Bardzo polecam to miejsce! Profesjonalna i miła obsługa, wszystko zostało dokładnie wyjaśnione, a badanie przebiegło w komfortowej atmosferze. Czuć indywidualne podejście do pacjenta. Jestem bardzo zadowolona z wizyty i z pewnością wrócę!!",
+    demo: false,
   },
   {
     id: "g2",
-    name: "[Imię W.]",
+    name: "Wiktor Chojnowski",
     rating: 5,
-    quote: "[Wklej treść opinii z Google.]",
-    demo: true,
-  },
-  {
-    id: "g3",
-    name: "[Imię P.]",
-    rating: 5,
-    quote: "[Wklej treść opinii z Google.]",
-    demo: true,
+    when: "tydzień temu",
+    quote:
+      "Profesjonalne podejście i bardzo dobry kontakt. Duży plus za cierpliwe tłumaczenie wszystkiego krok po kroku. Lokalizacja w centrum Kalisza też wygodna.",
+    demo: false,
   },
 ];

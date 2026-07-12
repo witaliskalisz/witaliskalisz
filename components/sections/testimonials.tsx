@@ -40,7 +40,7 @@ export function Testimonials() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
           {TESTIMONIALS.map((t, i) => (
             <motion.div
               key={t.id}
@@ -63,10 +63,8 @@ export function Testimonials() {
                   <p className="text-sm leading-relaxed text-foreground/85 flex-1">{t.quote}</p>
                   <div className="mt-5 flex items-center justify-between">
                     <p className="text-sm font-semibold">{t.name}</p>
-                    {t.demo && (
-                      <Badge variant="glass" className="text-[9px]">
-                        DEMO
-                      </Badge>
+                    {t.when && (
+                      <span className="text-xs text-muted-foreground">{t.when}</span>
                     )}
                   </div>
                 </CardContent>
@@ -83,8 +81,7 @@ export function Testimonials() {
             </a>
           </Button>
           <p className="text-[11px] text-muted-foreground mt-6 max-w-xl mx-auto">
-            Opinie oznaczone „DEMO" to placeholdery — przed publikacją zostaną zastąpione realnymi
-            opiniami klientów z profilu Google.
+            Opinie pochodzą z profilu Google naszego gabinetu.
           </p>
         </Reveal>
       </div>
