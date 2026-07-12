@@ -1,12 +1,13 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Star, Quote, ExternalLink } from "lucide-react";
 import { Reveal } from "@/components/effects/reveal";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { TESTIMONIALS } from "@/lib/testimonials";
+import { TESTIMONIALS, relativeTimePl } from "@/lib/testimonials";
 import { SITE } from "@/lib/site";
 
 const GOOGLE_REVIEWS_URL = `https://www.google.com/maps/search/${encodeURIComponent(
@@ -35,7 +36,7 @@ export function Testimonials() {
               ))}
             </div>
             <span>
-              <strong className="text-foreground">4,9</strong> · opinie w Google
+              <strong className="text-foreground">5,0</strong> · opinie w Google
             </span>
           </div>
         </Reveal>
@@ -63,9 +64,7 @@ export function Testimonials() {
                   <p className="text-sm leading-relaxed text-foreground/85 flex-1">{t.quote}</p>
                   <div className="mt-5 flex items-center justify-between">
                     <p className="text-sm font-semibold">{t.name}</p>
-                    {t.when && (
-                      <span className="text-xs text-muted-foreground">{t.when}</span>
-                    )}
+                    <RelativeTime date={t.date} />
                   </div>
                 </CardContent>
               </Card>
@@ -86,6 +85,19 @@ export function Testimonials() {
         </Reveal>
       </div>
     </section>
+  );
+}
+
+function RelativeTime({ date }: { date: string }) {
+  // Liczymy po stronie klienta, aby napis był zawsze aktualny i bez niezgodności hydratacji.
+  const [label, setLabel] = useState("");
+  useEffect(() => {
+    setLabel(relativeTimePl(date));
+  }, [date]);
+  return (
+    <span className="text-xs text-muted-foreground" suppressHydrationWarning>
+      {label}
+    </span>
   );
 }
 

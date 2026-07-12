@@ -156,7 +156,7 @@ export function Hero() {
                 ))}
               </div>
               <span className="text-muted-foreground">
-                <strong className="text-foreground">4.9</strong> · Klienci od 2016
+                <strong className="text-foreground">5.0</strong> · Klienci od 2016
               </span>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
