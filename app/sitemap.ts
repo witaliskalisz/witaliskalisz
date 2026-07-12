@@ -9,9 +9,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/pakiety",
     "/badanie-zywej-kropli-krwi",
+    "/test-nietolerancji-pokarmowej",
+    "/analizator-quantum",
+    "/health-diagnostic-scanner-3d",
     "/o-nas",
     "/kontakt",
     "/polityka-prywatnosci",
+    "/polityka-cookies",
     "/regulamin",
   ].map((path) => ({
     url: `${base}${path}`,

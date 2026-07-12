@@ -12,7 +12,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "O nas — Witalis Kalisz",
   description:
-    "Witalis to prywatna pracownia diagnostyki funkcjonalnej w Kaliszu, prowadzona osobiście przez właścicielkę od 2018 roku. Spokojna rozmowa, indywidualne podejście, jasne wyjaśnienie wyników.",
+    "Witalis to prywatna pracownia diagnostyki funkcjonalnej w Kaliszu, prowadzona osobiście przez właścicielkę od 2016 roku. Spokojna rozmowa, indywidualne podejście, jasne wyjaśnienie wyników.",
   path: "/o-nas",
 });
 
@@ -32,7 +32,7 @@ export default function ONasPage() {
             </h1>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
               Witalis to prywatna pracownia diagnostyki funkcjonalnej w Kaliszu, prowadzona osobiście
-              przez właścicielkę od 2018 roku. Stawiamy na spokojną rozmowę, indywidualne podejście i
+              przez właścicielkę od 2016 roku. Stawiamy na spokojną rozmowę, indywidualne podejście i
               jasne wyjaśnienie wyników — bez pośpiechu i bez gotowych schematów.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 pt-2">

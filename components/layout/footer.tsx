@@ -103,9 +103,9 @@ function FooterColumn({
 }) {
   return (
     <div>
-      <h4 className="text-xs font-semibold uppercase tracking-[0.18em] mb-4 text-foreground">
+      <h3 className="text-xs font-semibold uppercase tracking-[0.18em] mb-4 text-foreground">
         {title}
-      </h4>
+      </h3>
       <ul className="space-y-2.5">
         {items.map((item) => (
           <li key={item.href}>

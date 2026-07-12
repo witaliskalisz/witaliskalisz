@@ -24,25 +24,25 @@ const REASONS = [
     icon: Microscope,
     title: "Sprzęt klasy laboratoryjnej",
     desc: "Mikroskop z kamerą cyfrową do powiększenia 1600× oraz certyfikowany system testów nietolerancji FoodDetective™. Prawdziwa diagnostyka, którą widzisz na własne oczy.",
-    accent: "from-blue-500/15 to-blue-400/0",
+    accent: "from-red-500/15 to-red-400/0",
   },
   {
     icon: Brain,
     title: "Indywidualne podejście",
     desc: "Właścicielka osobiście prowadzi każdą wizytę. Bez asystentów, bez 'taśmy'. Każdy klient dostaje 60-120 minut pełnej uwagi. Bez NFZ-owego pośpiechu.",
-    accent: "from-violet-500/15 to-violet-400/0",
+    accent: "from-rose-500/15 to-rose-400/0",
   },
   {
     icon: Timer,
     title: "Szybkie wyniki",
     desc: "Mikroskopia żywej kropli krwi — efekt natychmiastowy podczas wizyty. Test nietolerancji FoodDetective™ — wynik już po ok. 40 minutach, jeszcze w gabinecie.",
-    accent: "from-cyan-500/15 to-cyan-400/0",
+    accent: "from-orange-500/15 to-orange-400/0",
   },
   {
     icon: HeartHandshake,
     title: "Plan, nie tylko wyniki",
     desc: "Nie zostawiamy Cię ze stertą wykresów. Dostajesz konkretne zalecenia: nazwy preparatów, dawki, terminy, listę produktów. Plan, który da się wykonać.",
-    accent: "from-emerald-500/15 to-emerald-400/0",
+    accent: "from-amber-500/15 to-amber-400/0",
   },
   {
     icon: ShieldCheck,
@@ -54,7 +54,7 @@ const REASONS = [
 
 const STATS = [
   { value: 100, suffix: "%", label: "wizyt prowadzi właścicielka" },
-  { value: 7, suffix: " lat", label: "doświadczenia w praktyce" },
+  { value: 30, suffix: "+", label: "raportów w analizie Quantum" },
   { value: 59, suffix: "", label: "produktów w FoodDetective™" },
   { value: 1600, suffix: "×", label: "powiększenie mikroskopu" },
 ];
@@ -73,7 +73,7 @@ export function WhyUs() {
             <span className="italic font-normal text-muted-foreground">zamiast obietnic.</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Właścicielka prowadzi Witalis od 2018 roku. Osobiście — bo każdy klient zasługuje na
+            Właścicielka prowadzi Witalis od 2016 roku. Osobiście — bo każdy klient zasługuje na
             pełną uwagę i wyniki wytłumaczone prostym językiem.
           </p>
         </Reveal>

@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 /**
  * Parses price labels like:
  *   "249 zł"    → { amount: "249", suffix: "zł" }
- *   "od 349 zł" → { prefix: "od", amount: "349", suffix: "zł" }
+ *   "od 849 zł" → { prefix: "od", amount: "849", suffix: "zł" }
  */
 export function parsePriceLabel(label: string) {
   const match = label.match(/^(od\s+)?([\d\s]+?)(\s*zł.*)?$/);

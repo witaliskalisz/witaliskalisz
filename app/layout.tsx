@@ -5,8 +5,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Nav } from "@/components/layout/nav";
 import { Footer } from "@/components/layout/footer";
 import { AnnouncementBar } from "@/components/layout/announcement-bar";
+import { CookieConsent } from "@/components/layout/cookie-consent";
 import { GrainOverlay } from "@/components/effects/grain-overlay";
-import { Chatbot } from "@/components/chatbot/chatbot";
 import { Toaster } from "@/components/ui/sonner";
 import { buildMetadata } from "@/lib/seo";
 import { medicalBusinessSchema, faqSchema } from "@/lib/schema";
@@ -62,11 +62,17 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased min-h-dvh flex flex-col">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-xl focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-primary-foreground focus:shadow-lg"
+          >
+            Przejdź do treści
+          </a>
           <AnnouncementBar />
           <Nav />
-          <main className="flex-1">{children}</main>
+          <main id="main" className="flex-1">{children}</main>
           <Footer />
-          <Chatbot />
+          <CookieConsent />
           <Toaster position="bottom-right" />
           <GrainOverlay />
         </ThemeProvider>

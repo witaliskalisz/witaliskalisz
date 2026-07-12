@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Reveal } from "@/components/effects/reveal";
 import { SITE } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
+import { breadcrumbSchema, medicalTestSchema } from "@/lib/schema";
 
 export const metadata: Metadata = buildMetadata({
   title: "Badanie żywej kropli krwi — na czym polega",
@@ -31,6 +32,23 @@ const OBSERWACJE = [
 export default function ZywaKroplaPage() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            breadcrumbSchema([
+              { name: "Strona główna", href: "/" },
+              { name: "Badanie żywej kropli krwi", href: "/badanie-zywej-kropli-krwi" },
+            ]),
+            medicalTestSchema({
+              name: "Mikroskopowe badanie żywej kropli krwi",
+              description:
+                "Obserwacyjne, funkcjonalne badanie świeżej kropli krwi pod mikroskopem cyfrowym (powiększenie do 1600×). Metoda komplementarna do badań laboratoryjnych.",
+              path: "/badanie-zywej-kropli-krwi",
+            }),
+          ]),
+        }}
+      />
       {/* Hero */}
       <section className="container py-14 md:py-24">
         <Reveal className="max-w-3xl space-y-5">

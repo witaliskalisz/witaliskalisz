@@ -18,7 +18,7 @@ export default async function OGImage() {
           color: "white",
           fontFamily: "system-ui, sans-serif",
           background:
-            "linear-gradient(135deg, #0a0e1a 0%, #142141 50%, #0a0e1a 100%)",
+            "linear-gradient(135deg, #0d0708 0%, #2a1113 50%, #0d0708 100%)",
         }}
       >
         {/* Top brand block */}
@@ -31,7 +31,7 @@ export default async function OGImage() {
               width: 64,
               height: 64,
               borderRadius: 16,
-              background: "linear-gradient(135deg, #3b82f6, #22d3ee)",
+              background: "linear-gradient(135deg, #C9181E, #FF524A)",
               fontSize: 40,
               fontWeight: 700,
               color: "white",
@@ -51,7 +51,7 @@ export default async function OGImage() {
                 lineHeight: 1,
               }}
             >
-              Mikroskopia żywej krwi · Kalisz
+              Mikroskopia żywej kropli krwi · Kalisz
             </div>
           </div>
         </div>
@@ -78,8 +78,8 @@ export default async function OGImage() {
               lineHeight: 1.4,
             }}
           >
-            Funkcjonalna diagnostyka: mikroskopia żywej kropli krwi, testy nietolerancji IgG
-            i analiza niedoborów. W Kaliszu od 2018 roku.
+            Funkcjonalna diagnostyka: mikroskopowe badanie żywej kropli krwi, testy nietolerancji
+            pokarmowych, analiza niedoborów, biorezonans. W Kaliszu od 2016 roku.
           </div>
         </div>
 

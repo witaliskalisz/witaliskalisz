@@ -18,8 +18,8 @@ import { Badge } from "@/components/ui/badge";
 import { SITE } from "@/lib/site";
 
 const QUALIFICATIONS = [
-  { icon: Calendar, label: "7+ lat doświadczenia", sub: "od 2018" },
-  { icon: Microscope, label: "Mikroskopia żywej krwi", sub: "specjalizacja" },
+  { icon: Calendar, label: "Od 2016 roku", sub: "gabinet w Kaliszu" },
+  { icon: Microscope, label: "Mikroskopia żywej kropli krwi", sub: "specjalizacja" },
   { icon: Stethoscope, label: "FoodDetective™", sub: "certyfikat" },
   { icon: Award, label: "Plany suplementacyjne", sub: "indywidualne" },
 ];
@@ -60,7 +60,7 @@ export function Team() {
             <span className="italic font-normal text-muted-foreground">Pełna uwaga.</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Witalis to nie korporacja. To pracownia jednej specjalistki, która od 2018 roku
+            Witalis to nie korporacja. To pracownia jednej specjalistki, która od 2016 roku
             osobiście prowadzi każdą wizytę.
           </p>
         </Reveal>

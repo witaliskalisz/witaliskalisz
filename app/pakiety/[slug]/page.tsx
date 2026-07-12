@@ -76,13 +76,20 @@ export default async function PackagePage({ params }: { params: Promise<{ slug: 
 
             <Reveal delay={0.1} className="space-y-4">
               <p className="text-lg leading-relaxed text-pretty">{pkg.description}</p>
-              <Link
-                href="/badanie-zywej-kropli-krwi"
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline underline-offset-4"
-              >
-                Jak wygląda badanie żywej kropli krwi?
-                <ArrowRight className="size-4" />
-              </Link>
+              {pkg.learnMore && pkg.learnMore.length > 0 && (
+                <div className="flex flex-col gap-2 pt-1">
+                  {pkg.learnMore.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline underline-offset-4"
+                    >
+                      {link.label}
+                      <ArrowRight className="size-4" />
+                    </Link>
+                  ))}
+                </div>
+              )}
             </Reveal>
 
             <Reveal delay={0.15}>
@@ -174,7 +181,7 @@ export default async function PackagePage({ params }: { params: Promise<{ slug: 
                       <h3 className="font-display text-2xl">Zapytaj o ten pakiet</h3>
                       <p className="text-sm text-muted-foreground">
                         Wizyty umawiamy telefonicznie — zadzwoń, a dobierzemy termin i odpowiemy na
-                        wszystkie pytania. Wolisz napisać? Odezwij się mailowo lub w DM.
+                        wszystkie pytania. Wolisz napisać? Odezwij się mailowo.
                       </p>
                     </div>
                     <a

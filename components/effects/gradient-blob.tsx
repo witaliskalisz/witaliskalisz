@@ -17,8 +17,8 @@ const colors = {
   primary: "from-primary/40 to-primary/0",
   neon: "from-[hsl(var(--neon))]/40 to-[hsl(var(--neon))]/0",
   amber: "from-amber-400/30 to-amber-300/0",
-  violet: "from-violet-500/30 to-violet-400/0",
-  cyan: "from-cyan-400/30 to-cyan-300/0",
+  violet: "from-rose-500/30 to-rose-400/0",
+  cyan: "from-orange-400/30 to-orange-300/0",
 };
 
 export function GradientBlob({ className, size = "lg", color = "primary" }: GradientBlobProps) {

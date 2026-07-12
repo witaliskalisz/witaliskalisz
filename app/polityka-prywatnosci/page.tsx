@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { Reveal } from "@/components/effects/reveal";
 import { Badge } from "@/components/ui/badge";
@@ -20,7 +21,7 @@ export default function PolitykaPage() {
             Polityka prywatności
           </h1>
           <p className="text-sm text-muted-foreground">
-            Ostatnia aktualizacja: 2026-05-01
+            Ostatnia aktualizacja: 1 lipca 2026
           </p>
         </Reveal>
 
@@ -28,9 +29,9 @@ export default function PolitykaPage() {
           <section className="space-y-3" id="rodo">
             <h2 className="font-display text-2xl mt-8">1. Administrator danych</h2>
             <p>
-              Administratorem Państwa danych osobowych jest <strong>Witalis</strong>,
-              {" "}{SITE.address.fullLine}, tel. {SITE.contact.phoneDisplay},
-              e-mail {SITE.contact.email}.
+              Administratorem Państwa danych osobowych jest pracownia <strong>Witalis</strong>,
+              prowadzona przez {SITE.owner.name}, {SITE.address.fullLine},
+              tel. {SITE.contact.phoneDisplay}, e-mail {SITE.contact.email}.
             </p>
           </section>
 
@@ -38,10 +39,22 @@ export default function PolitykaPage() {
             <h2 className="font-display text-2xl mt-8">2. Cele i podstawy przetwarzania</h2>
             <p>Przetwarzamy Państwa dane w następujących celach:</p>
             <ul className="list-disc ml-6 space-y-2">
-              <li>obsługa zapytań i kontaktu (art. 6 ust. 1 lit. b i f RODO),</li>
+              <li>obsługa zapytań i kontaktu — telefonicznie, mailowo oraz w wiadomościach prywatnych na Facebooku i Instagramie (art. 6 ust. 1 lit. b i f RODO),</li>
               <li>realizacja umowy o świadczenie usług diagnostycznych (art. 6 ust. 1 lit. b RODO oraz art. 9 ust. 2 lit. h dla danych dotyczących zdrowia),</li>
               <li>spełnienie obowiązków księgowo-podatkowych (art. 6 ust. 1 lit. c RODO).</li>
             </ul>
+          </section>
+
+          <section className="space-y-3">
+            <h2 className="font-display text-2xl mt-8">Odbiorcy danych i podmioty przetwarzające</h2>
+            <p>
+              Dane mogą być powierzane zaufanym podmiotom przetwarzającym wyłącznie w zakresie
+              niezbędnym do świadczenia usług, m.in.: dostawcy hostingu i infrastruktury strony
+              (Vercel Inc.), biuro rachunkowe, dostawcy laboratoryjni realizujący zlecone testy
+              (np. Food Print). Kontaktując się przez Facebook lub Instagram, korzystają Państwo
+              również z usług Meta Platforms zgodnie z regulaminami tych serwisów. Nie sprzedajemy
+              danych ani nie przekazujemy ich do celów marketingowych podmiotom trzecim.
+            </p>
           </section>
 
           <section className="space-y-3">
@@ -81,9 +94,13 @@ export default function PolitykaPage() {
           <section className="space-y-3">
             <h2 className="font-display text-2xl mt-8">6. Pliki cookie</h2>
             <p>
-              Strona witalis.kalisz.pl używa wyłącznie niezbędnych plików cookie do działania
-              (preferencje motywu, sesja). Nie używamy plików cookie do śledzenia reklamowego ani
-              profilowania.
+              Strona używa wyłącznie niezbędnych plików cookie do prawidłowego działania (m.in.
+              preferencja motywu jasny/ciemny, zapis wyboru dotyczącego cookies). Nie stosujemy plików
+              cookie do śledzenia reklamowego ani profilowania. Szczegóły znajdą Państwo w{" "}
+              <Link href="/polityka-cookies" className="text-primary underline underline-offset-4">
+                Polityce cookies
+              </Link>
+              .
             </p>
           </section>
 

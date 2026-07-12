@@ -8,11 +8,11 @@ export const SITE = {
   ogImage: "/og-default.png",
   locale: "pl_PL",
 
-  founded: 2018,
+  founded: 2016,
   clientsServed: 1240,
 
   owner: {
-    name: "Majka Sośnicka",
+    name: "Maria Sośnicka",
     title: "Właściciel Witalis",
   },
 
@@ -57,9 +57,9 @@ export const NAVIGATION = {
     diagnostyka: [
       { label: "Wszystkie pakiety", href: "/pakiety" },
       { label: "Badanie żywej kropli krwi", href: "/badanie-zywej-kropli-krwi" },
-      { label: "Start — żywa kropla krwi", href: "/pakiety/start" },
-      { label: "Gut Health — nietolerancje", href: "/pakiety/gut-health" },
-      { label: "Witaminy & minerały", href: "/pakiety/vitamins" },
+      { label: "Test nietolerancji pokarmowej", href: "/test-nietolerancji-pokarmowej" },
+      { label: "Analizator Zdrowia Quantum", href: "/analizator-quantum" },
+      { label: "HEALTH DIAGNOSTIC SCANNER 3D", href: "/health-diagnostic-scanner-3d" },
     ],
     company: [
       { label: "O nas", href: "/o-nas" },
@@ -67,6 +67,7 @@ export const NAVIGATION = {
     ],
     legal: [
       { label: "Polityka prywatności", href: "/polityka-prywatnosci" },
+      { label: "Polityka cookies", href: "/polityka-cookies" },
       { label: "Regulamin", href: "/regulamin" },
       { label: "RODO", href: "/polityka-prywatnosci#rodo" },
     ],

@@ -28,7 +28,7 @@ export function Hero() {
         <div className="absolute inset-x-0 top-0 h-[700px] bg-gradient-to-b from-primary/[0.06] via-transparent to-transparent" />
         <div className="absolute -top-40 left-1/2 -translate-x-1/2 h-[700px] w-[1100px] rounded-full bg-gradient-radial from-primary/20 via-primary/5 to-transparent blur-3xl" />
         <div className="absolute -bottom-40 -left-20 h-[500px] w-[500px] rounded-full bg-gradient-radial from-[hsl(var(--neon))]/15 via-[hsl(var(--neon))]/5 to-transparent blur-3xl" />
-        <div className="absolute -bottom-40 -right-20 h-[500px] w-[500px] rounded-full bg-gradient-radial from-violet-500/10 via-transparent to-transparent blur-3xl" />
+        <div className="absolute -bottom-40 -right-20 h-[500px] w-[500px] rounded-full bg-gradient-radial from-rose-500/10 via-transparent to-transparent blur-3xl" />
       </div>
 
       <div className="container relative">
@@ -51,7 +51,7 @@ export function Hero() {
             <div className="flex items-center gap-3">
               <span className="h-px w-10 bg-gradient-to-r from-transparent to-border" />
               <span className="text-[10px] md:text-xs font-semibold uppercase tracking-[0.32em] text-muted-foreground">
-                Mikroskopia żywej krwi · Kalisz · od 2018
+                Mikroskopia żywej kropli krwi · Kalisz · od 2016
               </span>
               <span className="h-px w-10 bg-gradient-to-l from-transparent to-border" />
             </div>
@@ -111,9 +111,11 @@ export function Hero() {
           >
             Funkcjonalna diagnostyka prewencyjna —{" "}
             <strong className="text-foreground font-medium">
-              mikroskopia żywej kropli krwi, testy nietolerancji IgG i analiza niedoborów
+              mikroskopowe badanie żywej kropli krwi, testy na nietolerancje pokarmowe, analiza
+              niedoborów witamin i minerałów analizatorem zdrowia Quantum, biorezonans HEALTH
+              DIAGNOSTIC SCANNER 3D
             </strong>
-            . Metody komplementarne, indywidualne podejście, pełna uwaga. W Kaliszu od 2018 roku.
+            . Metody komplementarne, indywidualne podejście, pełna uwaga. W Kaliszu od 2016 roku.
           </motion.p>
 
           <motion.div
@@ -154,7 +156,7 @@ export function Hero() {
                 ))}
               </div>
               <span className="text-muted-foreground">
-                <strong className="text-foreground">4.9</strong> · Klienci od 2018
+                <strong className="text-foreground">4.9</strong> · Klienci od 2016
               </span>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
@@ -184,7 +186,7 @@ export function Hero() {
               {[
                 { icon: Microscope, label: "Powiększenie", value: "1600×", sub: "mikroskop cyfrowy" },
                 { icon: FlaskConical, label: "Produkty", value: "59", sub: "FoodDetective™" },
-                { icon: Activity, label: "Doświadczenie", value: "7 lat", sub: "od 2018" },
+                { icon: Activity, label: "Doświadczenie", value: "od 2016", sub: "gabinet w Kaliszu" },
                 { icon: ShieldCheck, label: "Wyniki", value: "40 min", sub: "FoodDetective™" },
               ].map((stat, i) => (
                 <motion.div

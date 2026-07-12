@@ -10,31 +10,27 @@ interface LogoProps {
 }
 
 const sizeMap = {
-  sm: { box: "h-9 w-9", px: 36 },
-  md: { box: "h-10 w-10", px: 40 },
-  lg: { box: "h-12 w-12", px: 48 },
+  sm: "h-9 w-9",
+  md: "h-10 w-10",
+  lg: "h-12 w-12",
 };
 
 export function Logo({ className, short = false, size = "md" }: LogoProps) {
-  const s = sizeMap[size];
-
   return (
     <Link href="/" className={cn("inline-flex items-center gap-3 group", className)}>
-      <span
+      <BrandMark
         className={cn(
-          "relative inline-flex shrink-0 transition-transform group-hover:scale-105",
-          s.box
+          "shrink-0 transition-transform group-hover:scale-105 drop-shadow-[0_6px_16px_-6px_rgba(230,20,20,0.45)]",
+          sizeMap[size]
         )}
-      >
-        <BrandMark className="size-full" />
-      </span>
+      />
       {!short && (
         <span className="flex flex-col leading-none">
           <span className="font-logo text-2xl font-semibold tracking-[-0.01em]">
             {SITE.name}
           </span>
           <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground mt-1">
-            Mikroskopia żywej krwi · Kalisz
+            Mikroskopia żywej kropli krwi · Kalisz
           </span>
         </span>
       )}
@@ -50,8 +46,8 @@ export function BrandMark({ className }: { className?: string }) {
         src="/logo-mark.png"
         alt="Witalis"
         fill
-        sizes="48px"
-        className="object-contain drop-shadow-[0_6px_16px_-6px_hsl(var(--primary)/0.5)]"
+        sizes="80px"
+        className="object-contain"
         priority
       />
     </span>

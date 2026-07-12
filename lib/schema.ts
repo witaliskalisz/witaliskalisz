@@ -11,7 +11,7 @@ export function medicalBusinessSchema() {
     description: SITE.description,
     url: SITE.url,
     image: `${SITE.url}/og-default.png`,
-    logo: `${SITE.url}/logo.png`,
+    logo: `${SITE.url}/logo-mark.png`,
     telephone: SITE.contact.phone,
     email: SITE.contact.email,
     priceRange: "od 249 PLN",
@@ -62,9 +62,15 @@ export function medicalBusinessSchema() {
       },
       {
         "@type": "MedicalTest",
-        name: "Analiza niedoborów witamin i minerałów",
+        name: "Analiza niedoborów witamin i minerałów — Analizator Zdrowia Quantum",
         description:
-          "Ocena niedoborów (m.in. żelazo, B12, kwas foliowy) wraz z indywidualnym planem suplementacji.",
+          "Bezinwazyjna ocena niedoborów witamin, minerałów, aminokwasów i pracy narządów Kwantowym Magnetycznym Analizatorem Rezonansowym. Metoda komplementarna wraz z indywidualnym planem suplementacji.",
+      },
+      {
+        "@type": "MedicalTest",
+        name: "HEALTH DIAGNOSTIC SCANNER 3D (biorezonans)",
+        description:
+          "Biorezonansowa diagnostyka funkcjonalna oceniająca czynnościowy stan organizmu i jego układów — komplementarna do badań laboratoryjnych.",
       },
     ],
     sameAs: [SITE.social.facebook, SITE.social.instagram].filter(Boolean),
@@ -80,6 +86,37 @@ export function faqSchema() {
       name: item.q,
       acceptedAnswer: { "@type": "Answer", text: item.a },
     })),
+  };
+}
+
+export function medicalTestSchema({
+  name,
+  description,
+  path,
+}: {
+  name: string;
+  description: string;
+  path: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "MedicalTest",
+    name,
+    description,
+    url: `${SITE.url}${path}`,
+    provider: {
+      "@type": "MedicalBusiness",
+      "@id": `${SITE.url}#business`,
+      name: SITE.name,
+      telephone: SITE.contact.phone,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: SITE.address.street,
+        addressLocality: SITE.address.city,
+        postalCode: SITE.address.postal,
+        addressCountry: SITE.address.country,
+      },
+    },
   };
 }
 
