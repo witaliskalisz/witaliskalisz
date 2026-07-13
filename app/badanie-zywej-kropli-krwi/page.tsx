@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { ArrowRight, Phone, Microscope, Droplets, ClipboardList, CheckCircle2, XCircle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -140,6 +141,32 @@ export default function ZywaKroplaPage() {
             </Reveal>
           </div>
         </div>
+      </section>
+
+      {/* Plakat informacyjny */}
+      <section className="container py-8 md:py-12">
+        <Reveal className="max-w-xl mx-auto">
+          <a
+            href="/plakat-zywa-kropla.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block rounded-3xl overflow-hidden border border-border/60 bg-card shadow-[0_20px_60px_-30px_rgba(0,0,0,0.3)] transition-transform hover:-translate-y-1"
+            aria-label="Otwórz plakat w pełnym rozmiarze"
+          >
+            <Image
+              src="/plakat-zywa-kropla.jpg"
+              alt="Plakat: Twoje zdrowie we krwi — co może wykryć mikroskopowe badanie żywej kropli krwi i przy jakich objawach warto się zbadać"
+              width={1462}
+              height={2048}
+              sizes="(max-width: 768px) 100vw, 576px"
+              quality={90}
+              className="w-full h-auto"
+            />
+          </a>
+          <p className="text-center text-xs text-muted-foreground mt-3">
+            Kliknij plakat, aby otworzyć w pełnym rozmiarze.
+          </p>
+        </Reveal>
       </section>
 
       {/* Czego nie można określić + disclaimer */}
