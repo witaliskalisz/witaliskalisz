@@ -94,7 +94,7 @@ export default async function OGImage() {
           }}
         >
           <div style={{ display: "flex" }}>
-            witalis.kalisz.pl · ul. Babina 6 · 62-800 Kalisz
+            witaliskalisz.pl · ul. Babina 6 · 62-800 Kalisz
           </div>
           <div style={{ display: "flex" }}>881 353 444</div>
         </div>

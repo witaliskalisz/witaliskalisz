@@ -4,7 +4,7 @@ export const SITE = {
   tagline: "Zobacz, czego naprawdę potrzebuje Twój organizm.",
   description:
     "Prywatna diagnostyka funkcjonalna i prewencyjna w Kaliszu — mikroskopia żywej kropli krwi, testy nietolerancji pokarmowych IgG (FoodDetective) i analiza niedoborów. Metody komplementarne do badań laboratoryjnych.",
-  url: "https://witalis.kalisz.pl",
+  url: "https://witaliskalisz.pl",
   ogImage: "/og-default.png",
   locale: "pl_PL",
 
