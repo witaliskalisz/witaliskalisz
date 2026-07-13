@@ -20,7 +20,7 @@ const OBSERWACJE = [
   "Kształt oraz agregacje czerwonych krwinek",
   "Stopień aktywności białych krwinek (odporność)",
   "Uszkodzenia komórek krwi przez wolne rodniki",
-  "Obecność struktur niepożądanych (m.in. pasożyty, grzyby)",
+  "Obecność struktur niepożądanych (m.in. pasożyty, grzyby, metale ciężkie)",
   "Zaburzenia trawienia białek",
   "Struktury krystaliczne (blaszki cholesterolu, kryształy kwasu moczowego)",
   "Wskazówki dot. niedoborów żelaza, kwasu foliowego, witaminy B12 (anemie)",
@@ -98,7 +98,7 @@ export default function ZywaKroplaPage() {
           <InfoCard icon={ClipboardList} title="Jak się przygotować">
             <ul className="space-y-1.5">
               <li>• Co najmniej 24 godziny przed badaniem nie spożywaj alkoholu.</li>
-              <li>• W dniu badania nie pij kawy naturalnej.</li>
+              <li>• W dniu badania nie pij kawy.</li>
               <li>• Na 2 godziny przed badaniem nie spożywaj posiłku.</li>
               <li>• Około 30 min przed badaniem wypij 0,5 litra wody.</li>
             </ul>

@@ -35,7 +35,6 @@ const ZALETY = [
   "Kontrola skuteczności dowolnej terapii",
   "Szybka ocena działania preparatu lub innego czynnika na organizm",
   "Ustalenie stopnia zmian w narządzie lub układzie w ujęciu procentowym",
-  "Porównanie wyników z dwóch sesji — analiza dynamiki zmian",
 ];
 
 const PRZED = [

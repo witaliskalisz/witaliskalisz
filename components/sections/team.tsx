@@ -3,9 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
-  Award,
   Calendar,
-  GraduationCap,
   Heart,
   Microscope,
   Quote,
@@ -21,7 +19,6 @@ const QUALIFICATIONS = [
   { icon: Calendar, label: "Od 2016 roku", sub: "gabinet w Kaliszu" },
   { icon: Microscope, label: "Mikroskopia żywej kropli krwi", sub: "specjalizacja" },
   { icon: Stethoscope, label: "FoodDetective™", sub: "certyfikat" },
-  { icon: Award, label: "Plany suplementacyjne", sub: "indywidualne" },
 ];
 
 const VALUES = [
@@ -34,11 +31,6 @@ const VALUES = [
     icon: User,
     title: "Indywidualne podejście",
     desc: "Plan żywieniowy i suplementacyjny dobierany pod Twój wywiad i wyniki — nie szablon.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Ciągły rozwój",
-    desc: "Regularne szkolenia z dietetyki funkcjonalnej, mikrobiomu i suplementacji.",
   },
 ];
 
@@ -166,7 +158,7 @@ export function Team() {
           </Reveal>
 
           {/* Values strip */}
-          <Reveal delay={0.25} className="mt-12 grid md:grid-cols-3 gap-4">
+          <Reveal delay={0.25} className="mt-12 grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
             {VALUES.map((v) => (
               <motion.div
                 key={v.title}
