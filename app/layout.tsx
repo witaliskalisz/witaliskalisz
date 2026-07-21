@@ -4,7 +4,6 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Nav } from "@/components/layout/nav";
 import { Footer } from "@/components/layout/footer";
-import { AnnouncementBar } from "@/components/layout/announcement-bar";
 import { CookieConsent } from "@/components/layout/cookie-consent";
 import { GrainOverlay } from "@/components/effects/grain-overlay";
 import { Toaster } from "@/components/ui/sonner";
@@ -68,7 +67,6 @@ export default function RootLayout({
           >
             Przejdź do treści
           </a>
-          <AnnouncementBar />
           <Nav />
           <main id="main" className="flex-1">{children}</main>
           <Footer />

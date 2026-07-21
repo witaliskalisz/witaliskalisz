@@ -15,8 +15,8 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { MagneticButton } from "@/components/effects/magnetic-button";
 import { BrandMark } from "@/components/layout/logo";
+import { MagneticButton } from "@/components/effects/magnetic-button";
 import { SITE } from "@/lib/site";
 
 export function Hero() {
@@ -24,36 +24,35 @@ export function Hero() {
     <section className="relative overflow-hidden pt-10 pb-16 md:pt-24 md:pb-28 md:min-h-[88dvh] flex items-center">
       {/* Background layers */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 grid-bg opacity-[0.35] dark:opacity-[0.18]" />
-        <div className="absolute inset-x-0 top-0 h-[700px] bg-gradient-to-b from-primary/[0.06] via-transparent to-transparent" />
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 h-[700px] w-[1100px] rounded-full bg-gradient-radial from-primary/20 via-primary/5 to-transparent blur-3xl" />
-        <div className="absolute -bottom-40 -left-20 h-[500px] w-[500px] rounded-full bg-gradient-radial from-[hsl(var(--neon))]/15 via-[hsl(var(--neon))]/5 to-transparent blur-3xl" />
-        <div className="absolute -bottom-40 -right-20 h-[500px] w-[500px] rounded-full bg-gradient-radial from-rose-500/10 via-transparent to-transparent blur-3xl" />
+        <div className="absolute inset-0 grid-bg opacity-[0.3] dark:opacity-[0.16]" />
+        <div className="absolute inset-x-0 top-0 h-[600px] bg-gradient-to-b from-primary/[0.07] via-transparent to-transparent" />
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full bg-gradient-radial from-primary/15 via-primary/5 to-transparent blur-3xl" />
       </div>
 
       <div className="container relative">
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
-          {/* Massive brand block */}
+          {/* Duże, wyśrodkowane logo marki */}
           <motion.div
+            id="hero-brand"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-col items-center gap-5"
+            className="flex flex-col items-center gap-4 md:gap-5"
           >
-            <div className="flex items-center gap-4 md:gap-5">
-              <span className="relative inline-flex size-[64px] md:size-[80px]">
+            <div className="flex items-center gap-3 md:gap-5">
+              <span className="relative inline-flex size-[56px] sm:size-[64px] md:size-[80px]">
                 <BrandMark className="size-full" />
               </span>
-              <span className="font-logo text-[clamp(3.5rem,9vw,7rem)] leading-none tracking-[-0.03em] font-semibold">
+              <span className="font-logo text-[clamp(3rem,9vw,7rem)] leading-none tracking-[-0.03em] font-semibold">
                 Witalis
               </span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="h-px w-10 bg-gradient-to-r from-transparent to-border" />
-              <span className="text-[10px] md:text-xs font-semibold uppercase tracking-[0.32em] text-muted-foreground">
+              <span className="hidden sm:block h-px w-10 bg-gradient-to-r from-transparent to-border" />
+              <span className="text-[9px] sm:text-[11px] md:text-xs font-semibold uppercase tracking-[0.2em] sm:tracking-[0.32em] text-muted-foreground text-center">
                 Mikroskopia żywej kropli krwi · Kalisz · od 2016
               </span>
-              <span className="h-px w-10 bg-gradient-to-l from-transparent to-border" />
+              <span className="hidden sm:block h-px w-10 bg-gradient-to-l from-transparent to-border" />
             </div>
           </motion.div>
 
@@ -61,11 +60,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-10"
+            className="mt-8"
           >
             <Badge variant="glass" className="text-[11px] uppercase tracking-[0.18em] py-1.5">
               <Sparkles className="size-3 text-primary" />
-              Witalis 2026 · Diagnostyka jutra, dziś
+              Diagnostyka jutra, dziś
             </Badge>
           </motion.div>
 
@@ -73,7 +72,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-7 font-display text-[clamp(2.5rem,6vw,4.75rem)] leading-[0.95] tracking-[-0.025em] text-balance"
+            className="mt-7 font-display text-[clamp(2.5rem,6vw,4.75rem)] leading-[0.98] tracking-[-0.025em] text-balance"
           >
             Zobacz, czego{" "}
             <span className="italic font-normal text-muted-foreground">naprawdę</span>

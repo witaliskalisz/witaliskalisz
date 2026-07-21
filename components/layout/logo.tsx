@@ -29,7 +29,7 @@ export function Logo({ className, short = false, size = "md" }: LogoProps) {
           <span className="font-logo text-2xl font-semibold tracking-[-0.01em]">
             {SITE.name}
           </span>
-          <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground mt-1">
+          <span className="hidden sm:block text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground mt-1 whitespace-nowrap">
             Mikroskopia żywej kropli krwi · Kalisz
           </span>
         </span>
